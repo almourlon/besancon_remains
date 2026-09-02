@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!--
+    Cette page présente un texte du BMB Ms 1054 folio par folio :
+    l'image du manuscrit est placée à gauche et la transcription à droite.
+    dialogue-images.js agrandit une image lorsqu'on clique dessus.
+    language.js traduit l'interface, mais jamais la transcription.
+    Toute la mise en page du site reste regroupée dans styles.css.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogue premier — Besançon Remains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="dialogue-images.js" defer></script>
+    <script src="language.js" defer></script>
+</head>
+<body data-en-title="Dialogue premier — Besançon Remains" data-fr-title="Dialogue premier — Besançon Remains">
+    <header class="header">
+        <a class="brand" href="index.html" aria-label="For All Its Changes, Besançon Remains — Home">
+            <span class="brand-mark" aria-hidden="true">❧</span>
+            <span class="title">Besançon Remains</span>
+        </a>
+
+        <nav class="menu" aria-label="Main navigation" data-en-label="Main navigation" data-fr-label="Navigation principale">
+            <a href="index.html" class="menu-link"><span data-lang="en">Home</span><span data-lang="fr" hidden>Accueil</span></a>
+            <a href="dialogues.html" class="menu-link is-active" aria-current="page">Dialogues</a>
+            <a href="contexte.html" class="menu-link"><span data-lang="en">Historical Context</span><span data-lang="fr" hidden>Contexte historique</span></a>
+            <a href="manuscrit.html" class="menu-link"><span data-lang="en">The Manuscript</span><span data-lang="fr" hidden>Le manuscrit</span></a>
+        </nav>
+
+        <div class="language-switcher" role="group" aria-label="Language" data-en-label="Language" data-fr-label="Langue">
+            <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+            <span aria-hidden="true">/</span>
+            <button class="language-button" type="button" data-language="fr" aria-pressed="false">FR</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2><span data-lang="en">Contents</span><span data-lang="fr" hidden>Sommaire</span></h2>
+            <ul>
+                <li><a href="testd1.html" class="is-active" aria-current="page">Dialogue premier</a></li>
+                <li><a href="d5.html">Joie de Jaquemard</a></li>
+                <li><a href="d2.html">Dialogue second</a></li>
+                <li><a href="d3.html">Dialogue troisième</a></li>
+                <li><a href="d4.html">Dialogue quatrième</a></li>
+                <li><a href="d6.html">Vers pour la paix</a></li>
+                <li><a href="d7.html">Description burlesque</a></li>
+                <li><a href="d8.html">Dialogue entre deux Comtois</a></li>
+                <li><a href="d9.html">Dispute de Jacquemart</a></li>
+                <li><a href="sentences-latines.html">Sentences latines</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1 class="page-title">Dialogue premier</h1>
+            <p class="dialogue-subtitle">Entre Barbisier et Myon, vignerons à Besançon, coqualans, barbisier</p>
+            <p class="image-hint">
+                <span data-lang="en">Click a manuscript image to enlarge it.</span>
+                <span data-lang="fr" hidden>Cliquez sur une image du manuscrit pour l’agrandir.</span>
+            </p>
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f001r.jpg" alt="Ms. 1054, f. 1r">
+                    <figcaption>Ms. 1054, f. 1r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p class="speaker">Barbizier</p>
+                    <p>Bon jou, Sire mÿon quan veu t'on uandangie<br>
+ji semble que noües ueignes fin prou bin pidancie<br>
+ji sont nat tout pathoüt ; ji faüre ai mon aiuis<br>
+las coüepa lou put ta, pou lundÿ, ou mäedhÿ.</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f001v.jpg" alt="Ms. 1054, f. 1v">
+                    <figcaption>Ms. 1054, f. 1v</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p class="speaker">Nÿon</p>
+                    <p>Paure grele besache, ji ne t'appartin pas<br>
+de Conseiller mÿon qui vaut un auouca<br>
+j'aÿ deja trauoiché les Rües, et les Roüottes,<br>
+pour uoi si aux aîrons, il ÿ auoit bin des coffles.</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Ji nas ran pou tout bin, qu'in tranchou et n'aiqüelle,<br>
+in goubelot de boüe, mon foüerot, in bareille,<br>
+mon muroü sot let greille, mon lie n'et poin d'entrepo<br>
+su in bou de louon on et cloüela met netpe.</p>
+                    <p class="speaker">Mÿon :</p>
+                    <p>Tu deurois avoir honte d'auoir accampouré<br>
+queüques champs, bin das uignes et puis un bon uargé,<br>
+que tes oeilles en pussint chüles autant de larmes<br>
+qu'il ÿ a sur Rouzemont de feulles, et de pois d'harbes</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Let poüerta chüe nous, n'ot pas di bin d'autrut<br>
+quand let möe me panret l'airet in carolus<br>
+Ji ne ferat pleura, ne sonna; ne charie,<br>
+on iret et lan ot entarra Barbizier.</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>On uint tout dret chée nous pou me fare let barbe<br>
+on üserue auoüe soin mon filet de moustache,<br>
+je la porte depuis qu'on fasoit les quatres,<br>
+je ne ueux pas non plus j'aimat tet fare aibatre.</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Quand let mienne ot bin grandi ji ne m'en coute ran<br>
+trente chis par ruquier toue et toties me tondant<br>
+lieu rasoÿ tiran tant, quon dire par met foÿ<br>
+qui nourissint lieu droüle aiuoüe dÿ tirepoia</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f002r.jpg" alt="Ms. 1054, f. 2r">
+                    <figcaption>Ms. 1054, f. 2r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p class="speaker">Myon</p>
+                    <p>Tu n'ais point de quezain et tu as bin heroux<br>
+de rire, et de gausié, tout comment font tes foüs,<br>
+Sot moÿ qui regle tou les murots, et las reünes,<br>
+les echaquiers et tous las des déz ans las ueignes,</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Ji uous aipaetint bin d'an tant saiuoit que moÿ<br>
+jy tüés las sourçies et peu ÿ las chessé,<br>
+las nuas me craignant meme jusqu'et lai pleüge<br>
+ji uené deu Roüegnon sans que ce m'aitegneusse.</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>Tu as pire que las sourçies de tan diro d'aiffares<br>
+si tu auois eté comme moÿ et lai gare<br>
+ou plus il me boussoit, plus je les applattois<br>
+je les contraignois tous de se sauuer de moÿ.</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>dans lou siege darrie ji etouë bon soudas<br>
+on fit ne gran söetie dÿ couta das chaipras<br>
+on me criet; qui uiue : ji me disé francois,<br>
+ji trompé let poüere aille se fust bin maugra moÿ.</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>Tu etois un grand traitre de te dire francois<br>
+Si j'auois milles uies douné je les aurois<br>
+on t'aurois hoünouré et meme deü pairis<br>
+on t'aurois enuoÿé queüque chose de prix.</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Chadhée ÿ me lesserie et su met boune mine<br>
+ÿ me disene gueux ua t'en boire une pinte,<br>
+quand ÿ fust loin de lieu, ÿ ollé uöe in cheuos<br>
+ji ué monta dessus, et coure coume in föe.</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f002v.jpg" alt="Ms. 1054, f. 2v">
+                    <figcaption>Ms. 1054, f. 2v</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p class="speaker">Mÿon</p>
+                    <p>quand j'étois un peu jüene que let chaot coüquine<br>
+las mauuases pensée me ueniont file a file,<br>
+i ÿ boutit bin bon ordre, aiuoües das borgirots<br>
+je la fis bin de matre deuenir lou uolot.</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Lou pere Rougement eta tou coüme uous,<br>
+quan ce qui lÿ erriua s'ettrilla bin ettous<br>
+si failla maintenant qu'on se göeneusse enquin<br>
+las ueignes airin let mine de manqua de loicin</p>
+                    <p class="speaker">Myon</p>
+                    <p>Sarme un poüe ste'uen toille aiuoüe tas coucalanes<br>
+Seloüere s'en boussoit nous crierint tous alarmes<br>
+je suis sou de t'entendre raconter tes bandoüles<br>
+tu mans inpunamment et dit trou de pairoules,</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Uous uoulas toujoür etre lou matre tout päethou<br>
+tous las conbreganittes s'en plaignan bin ettous<br>
+ji nÿ et betque pour uous dans ne compaignie<br>
+uous braillies coume in sot, et toujous baibillies.</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>Je sus toujoüe officier de let bregation<br>
+et pui das put ancien de l'essasation<br>
+on ne fet ran sans moÿ dedans let confrerie<br>
+mazuÿ poin de canaille, nÿ bouterons pü les pieds.</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Chadhé ÿ en etoüe main ÿ m'en seu detmis<br>
+ÿ passoüe meu que uous pou in houme d'esprit<br>
+si ÿ pallet lou patois dÿ moins sot saiuamment<br>
+mais uous uous aicour chies lou francois sottement</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f003r.jpg" alt="Ms. 1054, f. 3r">
+                    <figcaption>Ms. 1054, f. 3r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p class="speaker">Mÿon</p>
+                    <p>j'aÿ appris a parler ches le dien linglois<br>
+nous etions comme freres ou chie lieu ou chie moÿ,<br>
+tous les hounestes gens se fais ont un plaisir<br>
+de venir ches mÿon boire jusqu'et ménnuit</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Uous cita lou dien l'airre but aiuoüe moÿ<br>
+A l'aiuoüe inuita aj maingie das oblets,<br>
+l'ere tous san fellon quan ÿ ne l'ÿ en couta ran<br>
+Se tena meu aj toble que dans son palement</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>Faure bin aiuoÿ soi pou boire aiuoüe ne bete<br>
+qui n'a pas put d'esprit qu'un uiau dans sa tete<br>
+tu as un couquin qui fas tou lou monde rire,<br>
+parceque tu as toujoüe queüqües soutises a dire.</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Fäedhé sire mÿon ÿ seu bon cÿtoÿen<br>
+mon pere et tou sas gens etin das pu anciens<br>
+ÿ uou aipaethin bin, uous qu'ete d'in uelege<br>
+de uous mouqua de moÿ aiuoüe lou de linmage</p>
+                    <p class="speaker">Myon</p>
+                    <p>Tais toÿ paure nigaud et ici et dans dijon,<br>
+les chatrou de cete uelle burent au braue mÿon<br>
+je les soÿes de meme en tournant de lai main<br>
+je fauche mes pens a reuoir a demain</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Uous ÿ ete in neueu que dit dejet let messe<br>
+ÿ cret qui risa bin d'aicouta ce langaige<br>
+sot dans las präs qu'on soÿe il fau palet chabré<br>
+pou dire enquin das mout etre fou et demi</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f003v.jpg" alt="Ms. 1054, f. 3v">
+                    <figcaption>Ms. 1054, f. 3v</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p class="speaker">Mÿon</p>
+                    <p>Quand je furent arriué on boutit pied et tare<br>
+on menit nos cheuaux dans n'aittole ai lieu ase<br>
+on lieu baillit a tous das groüe lopins de foins<br>
+de l'aiuoüne ai lieu sou, on en eu in gran soins</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Uous prantes ai uoute conte, las cheuos, pou das gins<br>
+las lopins se seruant, pou ceux que pidançant<br>
+on dit as animeaux qui broutint lieu soü d'harbes<br>
+se uous en dites tant, on ne uous panret pou n'anes</p>
+                    <p class="speaker">Myon</p>
+                    <p>Si je n'eusse pas eu un marteau cauuerné<br>
+je les aurois tretous ou rongé ou mangé<br>
+quand ces mal'herous os Bourginions dans met dent<br>
+il sembloit que mÿ doulot uouloit dançer dedans</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>autrefois ce te chose dedans lai quattrerie<br>
+m'eusse enquin airiua ÿ airoüe enraigie<br>
+ÿ failla que las dents sin d'airie ou de fa<br>
+pour meu rongie las tobles et netoÿe las chas</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>Aj propos Barbisier j'aÿ tant prochies nos pretes<br>
+qu'on ai a que menée toutes sas peutes betes<br>
+ses malheuroüs insectes on bin fa dÿ raueiges<br>
+dans nos poüeres raisins que lou bon düe las conferue</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Ji en a bin fa d'autres ue messieurs dÿ chaipitre<br>
+ji m'etcoutant coume si etoüe in jesuitre,<br>
+quand ÿ uoÿet las nuas trou lontens ai lai pleuge<br>
+ÿ las ué aiuathÿ que chaicun düe prieusse.</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f004r.jpg" alt="Ms. 1054, f. 4r">
+                    <figcaption>Ms. 1054, f. 4r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p class="speaker">Mÿon</p>
+                    <p>au pré de ças messieür tu a bin du pouuoit<br>
+et ne uois tu pas bin qui se mocquon de toÿ<br>
+que tes oeilles pussint pouritre dan lai coufte<br>
+Messieurs se soucient bin d'in peu grassou ma rouste</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Comment liet queüque tenp qui dine chez l'eueque<br>
+aipré bin pidançie on emplet mas pouchettes<br>
+ji n'etoüe pas ai toble aiuoüe lou groü monsieur<br>
+ji etoüs sus das larons bin loin de monseigneur</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>Tu saruois d'aibouaille parmÿ tou sas uolots<br>
+ji se moquiont de toÿ coüme d'in groüe polot<br>
+au lieu d'estre au travail tu fais le faineant<br>
+il faudroit t'etriller tu serois coume un gant</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Treue de complaimens palant uöe d'autre aiffares<br>
+il ÿ aiuat aj ce qu'on m'et dit das billet as quintanes<br>
+meme jusqu'ai lai chere de predication<br>
+ju entende n'aiffare que concerna mÿon</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>Parbleu faut qui te die qu'en allan pa let uille<br>
+je pardis une canne qui etoit bin gentile<br>
+de boüe de celesie rouge coüme escartette<br>
+un beau courjon de cüe elle n'etoit pas laitte</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>O bon düe qué risesse demanda in boton<br>
+que ueilla tou au pu dou ou troi fous tous rond<br>
+dimoins se fere aitta ne belle et joulie canne<br>
+chaicune n'aire pas rit de cette foule demande</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f004v.jpg" alt="Ms. 1054, f. 4v">
+                    <figcaption>Ms. 1054, f. 4v</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p class="speaker">Mÿon</p>
+                    <p>Ji cout ne mechante oüre çot ste peüte langroise<br>
+qui nous ferat mangie queüeque pommes d'angoises<br>
+on dit creme belauche, c'est bin aiuoü raison<br>
+tous les taillous ensemble mazüi n'en croquerons</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Que ce soit lai langroise ou lou uens ou lai bize<br>
+toujoüe ai ton uüt ste anna lÿ bin täedhiue<br>
+las poires madeleines en püllet blossessint<br>
+tout recoula et las poimmes, las poires, et las raisins.</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>J'aÿ defaut de lai pöethe, in prou joulÿ uargé<br>
+il ÿ aurat des fruits, et surtout aux pommée<br>
+il en raualant tous quoÿque uerme felie<br>
+on ne laisserat pas d'en uendre et d'en donner;</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>aj proupos chanta uöe uoüte pan gelin qu'a<br>
+ÿ bailleroüe grand choüse pou l'entendre bola'<br>
+lai musique enraigie j'aimas ne sÿ ot prise<br>
+on ne fere l'entendre chantie sans se creua de rire</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>T'in impudent coquin si j'auois un couteau<br>
+je te fendrois la tete meme jusqu'au cerueau<br>
+finissons ce discoüot ua t'en en ta möezon<br>
+ou tu pouras tater du gros point de mÿon</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>Diale qué grand fendant ji uous en defier<br>
+de leua seulement uoüte point contre moÿ<br>
+sÿ ués panre met parche qu'en haut ÿ a caichies<br>
+ÿ uous feras bien vöe comme on tüe las sourcies</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f005r.jpg" alt="Ms. 1054, f. 5r">
+                    <figcaption>Ms. 1054, f. 5r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p class="speaker">Mÿon</p>
+                    <p>Pu du raisonnement et ten vai au pu uite<br>
+ou je te feraÿ uoir le paÿs de la truitte<br>
+ou je te chanperaÿ aussÿ haut qu'in cloché<br>
+qu'auant que tu rechese les mouches t'auron mangé</p>
+                    <p class="speaker">Barbizier</p>
+                    <p>O oh çot tou de bon qui s'echauste lai tete<br>
+ji faut ai ce qu'on dit aiuita tai coulere<br>
+d'in touré, ou de noües, quand ÿ sont ainima<br>
+c'ot pourquoÿ ÿ m'en ué deicampa de ce pas</p>
+                    <p class="speaker">Mÿon</p>
+                    <p>Ma foÿ tu fais fort bin de panre ce päethÿ<br>
+de delouger bin uite, de denicher d'icÿ,<br>
+je t'allois avaler (arracer) la peau de ton uiseige,<br>
+ou t'allois enfermer coume un oiseau en caige</p>
+                    <p class="stage-direction">Fin du dialogue entre Barbizier et Mÿon Toüs deux uignerons de Besançon</p>
+                
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <span data-lang="en">Student project · MA Rare Books and Digital Humanities · 2024–2026</span>
+        <span data-lang="fr" hidden>Projet étudiant · Master Rare Books and Digital Humanities · 2024–2026</span>
+    </footer>
+</body>
+</html>

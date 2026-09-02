@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+    Page bilingue présentant deux cartes. Les cartes sont affichées ensemble
+    pour éviter un second script et garder le HTML facile à modifier.
+    Toute la mise en page est définie dans l'unique fichier styles.css.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps Before and After the French Conquest — Besançon Remains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="language.js" defer></script>
+</head>
+<body data-en-title="Maps Before and After the French Conquest — Besançon Remains" data-fr-title="Cartes avant et après la conquête française — Besançon Remains">
+    <header class="header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">❧</span><span class="title">Besançon Remains</span></a>
+        <nav class="menu" aria-label="Main navigation" data-en-label="Main navigation" data-fr-label="Navigation principale">
+            <a href="index.html" class="menu-link"><span data-lang="en">Home</span><span data-lang="fr" hidden>Accueil</span></a>
+            <a href="dialogues.html" class="menu-link">Dialogues</a>
+            <a href="contexte.html" class="menu-link is-active" aria-current="page"><span data-lang="en">Historical Context</span><span data-lang="fr" hidden>Contexte historique</span></a>
+            <a href="manuscrit.html" class="menu-link"><span data-lang="en">The Manuscript</span><span data-lang="fr" hidden>Le manuscrit</span></a>
+        </nav>
+        <div class="language-switcher" role="group" aria-label="Language" data-en-label="Language" data-fr-label="Langue">
+            <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span>
+            <button class="language-button" type="button" data-language="fr" aria-pressed="false">FR</button>
+        </div>
+    </header>
+
+    <main class="context-page">
+        <header class="article-header">
+            <p class="eyebrow"><span data-lang="en">Political geography</span><span data-lang="fr" hidden>Géographie politique</span></p>
+            <h1><span data-lang="en">Before and After the French Conquest</span><span data-lang="fr" hidden>Avant et après la conquête française</span></h1>
+            <p class="article-lead" data-lang="en">Two maps situate the different political settings in which the texts of Ms 1054 were composed and collected.</p>
+            <p class="article-lead" data-lang="fr" hidden>Deux cartes permettent de situer les différents cadres politiques dans lesquels les textes du Ms 1054 ont été composés et réunis.</p>
+            <a class="back-link" href="contexte.html"><span data-lang="en">← Back to Historical Context</span><span data-lang="fr" hidden>← Retour au contexte historique</span></a>
+        </header>
+
+        <section class="map-grid">
+            <figure class="map-figure">
+                <a href="https://hemed.univ-lemans.fr/cours2011/fr/res/Carte-PIII-chap4_Europe-XVI.jpg">
+                    <img src="https://hemed.univ-lemans.fr/cours2011/fr/res/Carte-PIII-chap4_Europe-XVI.jpg" alt="Map of Europe at the beginning of the sixteenth century">
+                </a>
+                <figcaption>
+                    <span data-lang="en">Before the conquest: Europe at the beginning of the sixteenth century. © SA, ESO Le Mans, CNRS, 2012.</span>
+                    <span data-lang="fr" hidden>Avant la conquête : l'Europe au début du XVIe siècle. © SA, ESO Le Mans, CNRS, 2012.</span>
+                </figcaption>
+            </figure>
+
+            <figure class="map-figure">
+                <a href="https://commons.wikimedia.org/wiki/File:Europe,_1700%E2%80%941714.png">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Europe%2C_1700%E2%80%941714.png/600px-Europe%2C_1700%E2%80%941714.png" alt="Map of Europe between 1700 and 1714">
+                </a>
+                <figcaption>
+                    <span data-lang="en">After the conquest: Europe, 1700–1714. Rebel Redcoat, public domain, via Wikimedia Commons.</span>
+                    <span data-lang="fr" hidden>Après la conquête : l'Europe, 1700–1714. Rebel Redcoat, domaine public, via Wikimedia Commons.</span>
+                </figcaption>
+            </figure>
+        </section>
+
+        <nav class="related-links" aria-label="Related pages" data-en-label="Related pages" data-fr-label="Pages associées">
+            <a href="c1.html"><span data-lang="en">Political status</span><span data-lang="fr" hidden>Statut politique</span></a>
+            <a href="c3.html"><span data-lang="en">Besançon and Henri IV</span><span data-lang="fr" hidden>Besançon face à Henri IV</span></a>
+        </nav>
+    </main>
+
+    <footer class="footer"><span data-lang="en">Student project · MA Rare Books and Digital Humanities · 2024–2026</span><span data-lang="fr" hidden>Projet étudiant · Master Rare Books and Digital Humanities · 2024–2026</span></footer>
+</body>
+</html>

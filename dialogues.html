@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+    Page d'accueil des dialogues du BMB Ms 1054.
+    Le sommaire conduit aux neuf textes et à la page des sentences latines.
+    language.js traduit l'interface et styles.css contient toute la mise en page.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogues — Besançon Remains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="language.js" defer></script>
+</head>
+<body data-en-title="Dialogues — Besançon Remains" data-fr-title="Dialogues — Besançon Remains">
+    <header class="header">
+        <a class="brand" href="index.html" aria-label="For All Its Changes, Besançon Remains — Home">
+            <span class="brand-mark" aria-hidden="true">❧</span>
+            <span class="title">Besançon Remains</span>
+        </a>
+
+        <nav class="menu" aria-label="Main navigation" data-en-label="Main navigation" data-fr-label="Navigation principale">
+            <a href="index.html" class="menu-link"><span data-lang="en">Home</span><span data-lang="fr" hidden>Accueil</span></a>
+            <a href="dialogues.html" class="menu-link is-active" aria-current="page">Dialogues</a>
+            <a href="contexte.html" class="menu-link"><span data-lang="en">Historical Context</span><span data-lang="fr" hidden>Contexte historique</span></a>
+            <a href="manuscrit.html" class="menu-link"><span data-lang="en">The Manuscript</span><span data-lang="fr" hidden>Le manuscrit</span></a>
+        </nav>
+
+        <div class="language-switcher" role="group" aria-label="Language" data-en-label="Language" data-fr-label="Langue">
+            <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+            <span aria-hidden="true">/</span>
+            <button class="language-button" type="button" data-language="fr" aria-pressed="false">FR</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2><span data-lang="en">Contents</span><span data-lang="fr" hidden>Sommaire</span></h2>
+            <ul>
+                <li><a href="testd1.html">Dialogue premier</a></li>
+                <li><a href="d5.html">Joie de Jaquemard</a></li>
+                <li><a href="d2.html">Dialogue second</a></li>
+                <li><a href="d3.html">Dialogue troisième</a></li>
+                <li><a href="d4.html">Dialogue quatrième</a></li>
+                <li><a href="d6.html">Vers pour la paix</a></li>
+                <li><a href="d7.html">Description burlesque</a></li>
+                <li><a href="d8.html">Dialogue entre deux Comtois</a></li>
+                <li><a href="d9.html">Dispute de Jacquemart</a></li>
+                <li><a href="sentences-latines.html">Sentences latines</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1 class="page-title">Dialogues</h1>
+            <p class="dialogue-subtitle">
+                <span data-lang="en">Manuscript images and diplomatic transcriptions</span>
+                <span data-lang="fr" hidden>Images du manuscrit et transcriptions diplomatiques</span>
+            </p>
+
+            <section class="article">
+                <p data-lang="en">The nine texts of BMB Ms 1054 are presented folio by folio, with the manuscript image beside its transcription. Click any manuscript image to examine it at a larger size.</p>
+                <p data-lang="fr" hidden>Les neuf textes du BMB Ms 1054 sont présentés folio par folio, avec l'image du manuscrit en regard de sa transcription. Cliquez sur une image du manuscrit pour l'examiner en grand format.</p>
+                <p data-lang="en">The transcriptions reproduce the original French and Franc-Comtois texts and are not translated. They remain a work in progress.</p>
+                <p data-lang="fr" hidden>Les transcriptions reproduisent les textes originaux français et franc-comtois et ne sont pas traduites. Elles restent un travail en cours.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <span data-lang="en">Student project · MA Rare Books and Digital Humanities · 2024–2026</span>
+        <span data-lang="fr" hidden>Projet étudiant · Master Rare Books and Digital Humanities · 2024–2026</span>
+    </footer>
+</body>
+</html>

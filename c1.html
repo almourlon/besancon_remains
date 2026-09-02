@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+    Article bilingue sur le statut politique de Besançon.
+    Les deux versions sont séparées par data-lang. Le petit script commun
+    language.js affiche la langue choisie.
+    Toute la mise en page est définie dans l'unique fichier styles.css.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Was Besançon a Spanish City? — Besançon Remains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="language.js" defer></script>
+</head>
+<body data-en-title="Was Besançon a Spanish City? — Besançon Remains" data-fr-title="Besançon, une ville espagnole ? — Besançon Remains">
+    <header class="header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">❧</span><span class="title">Besançon Remains</span></a>
+        <nav class="menu" aria-label="Main navigation" data-en-label="Main navigation" data-fr-label="Navigation principale">
+            <a href="index.html" class="menu-link"><span data-lang="en">Home</span><span data-lang="fr" hidden>Accueil</span></a>
+            <a href="dialogues.html" class="menu-link">Dialogues</a>
+            <a href="contexte.html" class="menu-link is-active" aria-current="page"><span data-lang="en">Historical Context</span><span data-lang="fr" hidden>Contexte historique</span></a>
+            <a href="manuscrit.html" class="menu-link"><span data-lang="en">The Manuscript</span><span data-lang="fr" hidden>Le manuscrit</span></a>
+        </nav>
+        <div class="language-switcher" role="group" aria-label="Language" data-en-label="Language" data-fr-label="Langue">
+            <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span>
+            <button class="language-button" type="button" data-language="fr" aria-pressed="false">FR</button>
+        </div>
+    </header>
+
+    <main class="context-page">
+        <header class="article-header">
+            <p class="eyebrow"><span data-lang="en">Political status</span><span data-lang="fr" hidden>Statut politique</span></p>
+            <h1><span data-lang="en">Was Besançon a Spanish City?</span><span data-lang="fr" hidden>Besançon, une ville espagnole ?</span></h1>
+            <p class="article-lead" data-lang="en">The familiar image of an old Spanish city conceals a more complicated constitutional history.</p>
+            <p class="article-lead" data-lang="fr" hidden>L'image familière d'une ancienne ville espagnole masque une histoire constitutionnelle plus complexe.</p>
+            <a class="back-link" href="contexte.html"><span data-lang="en">← Back to Historical Context</span><span data-lang="fr" hidden>← Retour au contexte historique</span></a>
+        </header>
+
+        <article class="article-body">
+            <div data-lang="en">
+                <p>Victor Hugo's description of “Besançon, vieille ville espagnole” helped establish the idea of a Spanish past. Yet the city and the County of Burgundy must be distinguished. After the Burgundian succession crisis of the late fifteenth century, the Duchy of Burgundy belonged to the kingdom of France, while the County of Burgundy remained within the Habsburg inheritance.</p>
+                <p>Besançon did not form part of that county. It was an Imperial City and enjoyed imperial immediacy: it depended directly on the Holy Roman Emperor. The charter granted by Rudolf I in 1290 confirmed rights and institutions that allowed the city to govern itself through its citizens and magistrates.</p>
+                <p>The King of Spain was also Count of Burgundy and acted as protector, or guardian, of Besançon. This relationship could provide military support, but protection did not initially make him the city's sovereign. The municipal government repeatedly defended the distinction between the guardian's rights and the emperor's sovereignty.</p>
+                <p>The exchange of Besançon for Frankenthal changed this situation. Negotiated over several years and implemented in 1664, it transferred the city from direct imperial dependence to the sovereignty of Philip IV. Besançon therefore did pass under Spanish sovereignty, but only for a brief and unsettled period.</p>
+                <p>French forces occupied the city in 1668 and again in 1674. The municipal magistracy was abolished in 1676, and the Treaty of Nijmegen confirmed the French conquest of Franche-Comté in 1678. The history behind the dialogues is therefore not a simple passage from “Spanish” to French rule, but a succession of changes affecting the city's status, institutions and understanding of itself.</p>
+            </div>
+
+            <div data-lang="fr" hidden>
+                <p>La formule de Victor Hugo, « Besançon, vieille ville espagnole », a contribué à installer l'idée d'un passé espagnol. Il faut pourtant distinguer la cité du comté de Bourgogne. Après la crise de succession bourguignonne de la fin du XVe siècle, le duché de Bourgogne appartient au royaume de France, tandis que le comté de Bourgogne demeure dans l'héritage des Habsbourg.</p>
+                <p>Besançon ne fait pas partie de ce comté. Elle est une ville d'Empire et bénéficie de l'immédiateté impériale : elle dépend directement de l'empereur du Saint-Empire. La charte accordée par Rodolphe Ier en 1290 confirme des droits et des institutions qui permettent à la cité de se gouverner par l'intermédiaire de ses citoyens et de ses magistrats.</p>
+                <p>Le roi d'Espagne est également comte de Bourgogne et exerce la protection, ou gardienneté, de Besançon. Cette relation peut apporter un soutien militaire, mais elle ne fait pas d'abord de lui le souverain de la cité. Le gouvernement municipal défend régulièrement la distinction entre les droits du gardien et la souveraineté de l'empereur.</p>
+                <p>L'échange de Besançon contre Frankenthal modifie cette situation. Négocié pendant plusieurs années et mis en œuvre en 1664, il fait passer la cité de la dépendance directe envers l'Empire à la souveraineté de Philippe IV. Besançon passe donc bien sous souveraineté espagnole, mais seulement pendant une période brève et incertaine.</p>
+                <p>Les forces françaises occupent la ville en 1668, puis de nouveau en 1674. La magistrature municipale est supprimée en 1676 et le traité de Nimègue confirme la conquête française de la Franche-Comté en 1678. L'histoire qui éclaire les dialogues n'est donc pas un simple passage d'une domination « espagnole » à une domination française, mais une succession de changements touchant le statut, les institutions et la manière dont la cité se définit.</p>
+            </div>
+        </article>
+
+        <nav class="related-links" aria-label="Related pages" data-en-label="Related pages" data-fr-label="Pages associées">
+            <a href="c7.html"><span data-lang="en">Charter of 1290</span><span data-lang="fr" hidden>Charte de 1290</span></a>
+            <a href="c2.html"><span data-lang="en">Maps</span><span data-lang="fr" hidden>Cartes</span></a>
+        </nav>
+    </main>
+
+    <footer class="footer"><span data-lang="en">Student project · MA Rare Books and Digital Humanities · 2024–2026</span><span data-lang="fr" hidden>Projet étudiant · Master Rare Books and Digital Humanities · 2024–2026</span></footer>
+</body>
+</html>
