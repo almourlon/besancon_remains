@@ -1,0 +1,1378 @@
+/*
+    FEUILLE DE STYLE UNIQUE DU SITE
+    « For All Its Changes, Besançon Remains »
+
+    Les règles sont classées par rubrique. Les adaptations responsive sont
+    regroupées à la fin du fichier.
+
+    GLOSSAIRE DES CLASSES
+
+    Éléments communs
+    .header                 en-tête commun à toutes les pages
+    .brand                  nom et emblème du projet
+    .brand-mark             fleuron placé devant le nom du projet
+    .title                  titre court affiché dans l'en-tête
+    .menu                   navigation principale
+    .menu-link              lien de la navigation principale
+    .is-active              page ou langue actuellement active
+    .language-switcher      groupe des boutons EN et FR
+    .language-button        bouton permettant de changer de langue
+    .footer                 pied de page commun
+
+    Accueil
+    .hero                   grand titre de la page d'accueil
+    .eyebrow                petite ligne placée au-dessus d'un grand titre
+    .subtitle               sous-titre du projet
+    .fleuron-rule           séparateur décoratif avec un fleuron
+    .introduction           présentation générale du projet
+    .introduction-copy      texte de l'introduction
+    .drop-cap               paragraphe commençant par une lettrine
+    .edition-note           encadré présentant la nature de l'édition
+    .edition-note-label     titre court de l'encadré d'édition
+    .explore                accès aux grandes rubriques du site
+    .section-heading        titre d'une grande section
+    .section-number         numéro décoratif d'une section
+    .gateways               grille contenant les cartes d'accès
+    .gateway                carte cliquable vers une rubrique
+    .gateway-image          image d'une carte d'accès
+    .gateway-caption        zone de texte d'une carte d'accès
+    .gateway-title          titre d'une carte d'accès
+    .gateway-sub            description courte d'une carte d'accès
+    .gateway-arrow          flèche placée dans une carte d'accès
+    .credit-note            mention relative aux images et aux droits
+
+    Contexte historique
+    .context-page           conteneur des pages de contexte
+    .context-hero           titre de la page d'accueil du contexte
+    .context-lead           introduction de la rubrique
+    .context-section        groupe d'articles ou de documents
+    .section-intro          introduction d'un groupe de cartes
+    .context-grid           grille des cartes de contexte
+    .context-card           carte menant à un article ou un document
+    .card-label             date ou catégorie d'une carte
+    .article-header         titre d'un article ou d'un document
+    .article-lead           résumé placé sous le titre d'un article
+    .back-link              lien de retour vers la page de contexte
+    .article-body           texte d'un article historique
+    .document-body          conteneur d'une transcription documentaire
+    .source-note            encadré donnant la référence d'une source
+    .document-status        état d'une transcription
+    .transcription          texte reproduit dans sa langue originale
+    .map-grid               grille contenant les cartes géographiques
+    .map-figure             image et légende d'une carte géographique
+    .related-links          navigation située en bas d'un article
+
+    Manuscrit
+    .manuscript-page        conteneur de la page du manuscrit
+    .manuscript-hero        grand titre de la page du manuscrit
+    .manuscript-lead        introduction de la page du manuscrit
+    .hero-actions           liens placés sous le grand titre
+    .action-link            lien présenté comme un bouton
+    .action-link-primary    bouton principal rempli en rouge
+    .text-link              lien simple mis en valeur
+    .inline-link-paragraph  paragraphe contenant un lien complémentaire
+    .section-index          navigation interne vers les trois parties
+    .section-index-number   numéro d'un lien de navigation interne
+    .manuscript-section     grande partie de la page du manuscrit
+    .manuscript-section-heading titre d'une partie du manuscrit
+    .section-kicker         courte indication au-dessus d'un titre
+    .prose-block            bloc de texte courant
+    .prose-block-after-cards texte placé après des cartes
+    .metadata-grid          grille de la notice matérielle
+    .manuscript-title-quote citation du titre ancien du manuscrit
+    .chronology             chronologie de la transmission
+    .chronology-date        date d'une étape de la chronologie
+    .chronology-title       titre d'une étape de la chronologie
+    .chronology-text        explication d'une étape de la chronologie
+    .witness-grid           grille des témoins manuscrits
+    .witness-card           fiche consacrée à un témoin
+    .witness-label          catégorie d'un témoin
+    .witness-date           date d'un témoin
+    .experiment-panel       encadré de l'expérience paléographique
+    .experiment-intro       introduction de l'expérience
+    .experiment-label       catégorie de l'expérience
+    .experiment-actions     liens vers l'expérience et ses données
+    .method-steps           étapes de la méthode
+    .method-number          numéro d'une étape de la méthode
+    .limits-note            avertissement sur les limites de l'expérience
+    .limits-title           titre de cet avertissement
+    .evidence-block         partie consacrée aux degrés de certitude
+    .evidence-heading       titre des degrés de certitude
+    .evidence-scale         grille comparant les degrés de certitude
+    .evidence-level         nom d'un degré de certitude
+    .evidence-attested      affirmation directement attestée
+    .evidence-supported     affirmation soutenue par plusieurs indices
+    .evidence-plausible     hypothèse plausible
+    .evidence-unknown       point qui n'est pas établi
+
+    Dialogues
+    .container              mise en page avec sommaire et contenu
+    .sidebar                sommaire latéral des dialogues
+    .main-content           contenu principal placé à côté du sommaire
+    .page-title             titre d'une page de dialogue
+    .article                présentation ou liste des dialogues
+    .dialogue-subtitle      titre développé d'un dialogue
+    .image-hint             indication expliquant l'agrandissement des images
+    .folio                  image et transcription présentées ensemble
+    .folio-image            image du folio et sa légende
+    .folio-text             transcription placée en regard de l'image
+    .speaker                nom d'un personnage placé avant sa réplique
+    .stage-direction        indication de mise en scène dans une transcription
+    .critical-note          mot ou passage pointillé portant une note critique, sans appel visible
+    .critical-tooltip       note critique affichée au survol, au clavier ou au toucher
+    .image-dialog           fenêtre affichant une image agrandie
+    .image-dialog-close     bouton fermant l'image agrandie
+
+    IDENTIFIANTS HTML
+
+    Ces identifiants servent d'ancres, de titres accessibles ou de destinations
+    de liens. Ils n'ont pas besoin de règles CSS particulières :
+    #project-title, #introduction-title, #edition-note-title, #explore-title,
+    #manuscript-title, #codex, #codex-title, #compilation,
+    #compilation-title, #hands, #hands-title et #evidence-title.
+*/
+/* 1. RÉGLAGES GÉNÉRAUX */
+
+:root {
+    --parchment: #ece2cd;
+    --parchment-light: #f8f2e4;
+    --ink: #3a2e22;
+    --ink-soft: #6b5c48;
+    --wine: #7a2e27;
+    --bronze: #a8874f;
+    --rule: #d3c3a0;
+    --shadow: rgba(58, 46, 34, 0.15);
+    --display: "Cormorant Garamond", Garamond, serif;
+    --body: "EB Garamond", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background-color: var(--parchment);
+    background-image: radial-gradient(ellipse at top left, rgba(168, 135, 79, 0.1), transparent 55%), radial-gradient(ellipse at bottom right, rgba(122, 46, 39, 0.07), transparent 55%);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+body > main {
+    max-width: 920px;
+    margin: auto;
+    padding: 0 32px;
+}
+
+a, button { -webkit-tap-highlight-color: transparent; }
+
+a:focus-visible, button:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
+
+.source-note { color: var(--ink-soft); }
+
+.source-note p { margin: 0; }
+
+/* 2. EN-TÊTE, NAVIGATION ET PIED DE PAGE */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 18px 26px;
+    padding: 17px 32px;
+    border-bottom: 1px solid var(--rule);
+    background: rgba(248, 242, 228, 0.96);
+}
+
+.brand {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    margin-right: auto;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.brand-mark { color: var(--wine); font-size: 1.3em; }
+
+.title {
+    color: var(--ink);
+    font-family: var(--display);
+    font-size: 1.25em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+nav.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.menu-link {
+    position: relative;
+    margin: 0 7px;
+    padding: 6px 2px;
+    color: var(--ink-soft);
+    font-size: 0.91em;
+    font-variant: small-caps;
+    letter-spacing: 0.045em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-link::after {
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--wine);
+    content: "";
+    transition: right 0.25s ease;
+}
+
+.menu-link:hover, .menu-link.is-active, .language-button:hover, .language-button.is-active {
+    color: var(--wine);
+}
+
+.menu-link:hover::after, .menu-link.is-active::after { right: 0; }
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 12px;
+    border-left: 1px solid var(--rule);
+    color: var(--rule);
+    font-size: 0.78em;
+}
+
+.language-button {
+    padding: 5px 3px;
+    border: 0;
+    background: transparent;
+    color: var(--ink-soft);
+    cursor: pointer;
+    font-family: var(--body);
+    font-size: 1em;
+    letter-spacing: 0.08em;
+}
+
+.language-button.is-active {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.footer {
+    padding: 18px;
+    border-top: 1px solid var(--rule);
+    background: var(--parchment-light);
+    color: var(--ink-soft);
+    font-size: 0.8em;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+/* 3. PAGE D'ACCUEIL */
+
+.hero { padding: 86px 0 48px; text-align: center; }
+
+.eyebrow {
+    margin: 0 0 24px;
+    color: var(--wine);
+    font-size: 0.84em;
+    font-variant: small-caps;
+    letter-spacing: 0.14em;
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(3rem, 7.6vw, 5.75rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 0.88;
+    text-wrap: balance;
+}
+
+.hero h1 em { color: var(--wine); font-weight: 500; }
+
+.subtitle {
+    max-width: 700px;
+    margin: 32px auto 0;
+    color: var(--ink-soft);
+    font-size: 1.15em;
+    font-style: italic;
+    line-height: 1.45;
+    text-wrap: balance;
+}
+
+.fleuron-rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: auto;
+    color: var(--bronze);
+}
+
+.fleuron-rule::before, .fleuron-rule::after {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+    content: "";
+}
+
+.fleuron-rule span { color: var(--wine); font-size: 1.2em; }
+
+.introduction { padding: 58px 0 20px; }
+
+.introduction h2, .section-heading h2 {
+    margin: 0;
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: 1.55em;
+    font-variant: small-caps;
+    font-weight: 600;
+    letter-spacing: 0.055em;
+}
+
+.introduction-copy { margin-top: 22px; text-align: justify; }
+
+.introduction-copy p { margin: 0 0 1.1em; }
+
+.drop-cap::first-letter {
+    float: left;
+    padding: 0.05em 0.08em 0 0;
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: 3.6em;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 0.8;
+}
+
+.edition-note {
+    margin: 24px 0 64px;
+    padding: 18px 24px 18px 28px;
+    border-left: 2px solid var(--bronze);
+    background: rgba(248, 242, 228, 0.42);
+    color: var(--ink-soft);
+    font-size: 0.94em;
+    font-style: italic;
+}
+
+.edition-note p, .credit-note p { margin: 0; }
+
+.edition-note .edition-note-label {
+    margin-bottom: 7px;
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: 1.1em;
+    font-style: normal;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+}
+
+.explore { padding-bottom: 54px; }
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.section-number {
+    margin: 0;
+    color: var(--bronze);
+    font-size: 0.78em;
+    letter-spacing: 0.12em;
+}
+
+.gateways {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.gateway {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    background: var(--parchment-light);
+    color: inherit;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.gateway:hover {
+    transform: translateY(-4px);
+    border-color: var(--bronze);
+    box-shadow: 0 12px 24px var(--shadow);
+}
+
+.gateway-image {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--rule);
+}
+
+.gateway-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(18%);
+    transition: 0.4s ease;
+}
+
+.gateway:hover .gateway-image img { transform: scale(1.04); filter: sepia(0%); }
+
+.gateway-caption {
+    position: relative;
+    display: block;
+    min-height: 126px;
+    padding: 18px 54px 22px 20px;
+    text-align: left;
+}
+
+.gateway-title, .gateway-sub { display: block; }
+
+.gateway-title {
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.gateway-sub {
+    margin-top: 5px;
+    color: var(--ink-soft);
+    font-size: 0.85em;
+    font-style: italic;
+    line-height: 1.35;
+}
+
+.gateway-arrow {
+    position: absolute;
+    right: 20px;
+    bottom: 21px;
+    color: var(--bronze);
+    font-size: 1.25em;
+    transition: 0.25s ease;
+}
+
+.gateway:hover .gateway-arrow { transform: translateX(4px); color: var(--wine); }
+
+.credit-note {
+    margin: 0 0 54px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-soft);
+    font-size: 0.85em;
+    font-style: italic;
+    text-align: center;
+}
+
+/* 4. PAGES DE CONTEXTE */
+
+.context-page { max-width: 980px; padding-bottom: 60px; }
+
+.context-hero, .article-header {
+    max-width: 800px;
+    margin: auto;
+    padding: 70px 0 45px;
+    text-align: center;
+}
+
+.context-hero h1, .article-header h1 {
+    margin: 0;
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: clamp(2.7rem, 7vw, 4.8rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.context-lead, .article-lead {
+    max-width: 720px;
+    margin: 24px auto 0;
+    color: var(--ink-soft);
+    font-size: 1.08em;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--wine);
+    text-underline-offset: 4px;
+}
+
+.context-section { padding: 45px 0; border-top: 1px solid var(--rule); }
+
+.context-section h2 {
+    margin: 0 0 8px;
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: 2rem;
+}
+
+.section-intro { margin: 0 0 24px; color: var(--ink-soft); }
+
+.context-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.context-card {
+    display: block;
+    padding: 22px;
+    border: 1px solid var(--rule);
+    background: var(--parchment-light);
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.context-card:hover { border-color: var(--bronze); }
+
+.context-card h3 {
+    margin: 0 0 8px;
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: 1.35em;
+}
+
+.context-card p {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.4;
+}
+
+.card-label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--bronze);
+    font-size: 0.75em;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+}
+
+.article-body, .document-body { max-width: 780px; margin: auto; }
+
+.article-body { text-align: justify; }
+
+.article-body p, .document-body p { margin: 0 0 1.15em; }
+
+.article-body h2, .document-body h2 {
+    margin: 42px 0 16px;
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: 1.7em;
+}
+
+.context-page .source-note, .document-status {
+    margin: 28px 0;
+    padding: 18px 20px;
+    border-left: 2px solid var(--bronze);
+    background: rgba(248, 242, 228, 0.5);
+    font-size: 0.92em;
+}
+
+.document-status { color: var(--ink-soft); }
+
+.document-status p { margin: 0; }
+
+.context-page .source-note p + p { margin-top: 8px; }
+
+.transcription {
+    padding-top: 10px;
+    border-top: 1px solid var(--rule);
+    text-align: left;
+}
+
+.transcription + .transcription { margin-top: 55px; }
+
+.transcription h2 { margin-top: 0; }
+
+blockquote {
+    margin: 28px 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--wine);
+    color: var(--ink-soft);
+    font-style: italic;
+}
+
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.map-figure { margin: 0; }
+
+.map-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
+}
+
+.map-figure figcaption {
+    margin-top: 10px;
+    color: var(--ink-soft);
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+.related-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 780px;
+    margin: 55px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+}
+
+.related-links a {
+    padding: 8px 12px;
+    border: 1px solid var(--rule);
+    color: var(--wine);
+    text-decoration: none;
+}
+
+.related-links a:hover { border-color: var(--bronze); background: var(--parchment-light); }
+
+/* 5. PAGE DU MANUSCRIT */
+
+.manuscript-page { max-width: 1040px; }
+
+.manuscript-hero {
+    max-width: 850px;
+    margin: auto;
+    padding: 75px 0 55px;
+    text-align: center;
+}
+
+.manuscript-hero h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.manuscript-lead {
+    max-width: 760px;
+    margin: 28px auto 0;
+    color: var(--ink-soft);
+    font-size: 1.15em;
+}
+
+.hero-actions, .experiment-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.experiment-actions { justify-content: flex-start; }
+
+.action-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 9px 17px;
+    border: 1px solid var(--bronze);
+    color: var(--wine);
+    text-align: center;
+    text-decoration: none;
+}
+
+.action-link:hover { background: var(--parchment-light); }
+
+.action-link-primary {
+    border-color: var(--wine);
+    background: var(--wine);
+    color: var(--parchment-light);
+}
+
+.action-link-primary:hover { background: #67251f; }
+
+.text-link { color: var(--wine); text-underline-offset: 4px; }
+
+.inline-link-paragraph { margin-top: 22px !important; text-align: left; }
+
+.section-index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 70px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+}
+
+.section-index a {
+    display: flex;
+    gap: 10px;
+    padding: 17px 20px;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.section-index a + a { border-left: 1px solid var(--rule); }
+
+.section-index a:hover { background: var(--parchment-light); color: var(--wine); }
+
+.section-index-number, .method-number {
+    color: var(--bronze);
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+}
+
+.manuscript-section { padding-bottom: 75px; scroll-margin-top: 25px; }
+
+.manuscript-section + .manuscript-section { padding-top: 65px; border-top: 1px solid var(--rule); }
+
+.manuscript-section-heading { align-items: flex-start; margin-bottom: 30px; }
+
+.manuscript-section-heading h2 {
+    margin: 0;
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: clamp(2.2rem, 5vw, 3.3rem);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.section-kicker, .experiment-label, .witness-label {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.75em;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+}
+
+.prose-block {
+    max-width: 780px;
+    margin: 30px auto 0;
+    text-align: justify;
+}
+
+.prose-block p { margin: 0 0 1em; }
+
+.metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin: 0;
+    border: 1px solid var(--rule);
+    background: var(--rule);
+}
+
+.metadata-grid div { padding: 17px; background: var(--parchment-light); }
+
+.metadata-grid dt {
+    margin-bottom: 5px;
+    color: var(--wine);
+    font-size: 0.75em;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+}
+
+.metadata-grid dd { margin: 0; line-height: 1.35; }
+
+.manuscript-title-quote {
+    margin: 28px 0;
+    padding: 24px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    font-style: italic;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.manuscript-title-quote p { margin: 0; }
+
+.chronology {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 38px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.chronology li { padding-top: 15px; border-top: 2px solid var(--bronze); }
+
+.chronology span { display: block; }
+
+.chronology-date, .witness-date {
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.chronology-title { margin-top: 3px; font-variant: small-caps; }
+
+.chronology-text {
+    margin-top: 5px;
+    color: var(--ink-soft);
+    font-size: 0.85em;
+}
+
+.witness-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.witness-card {
+    padding: 24px;
+    border: 1px solid var(--rule);
+    background: var(--parchment-light);
+}
+
+.witness-date { margin: 8px 0; }
+
+.witness-card h3 {
+    margin: 0 0 10px;
+    font-family: var(--display);
+    font-size: 1.3em;
+}
+
+.witness-card p:last-child {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.9em;
+}
+
+.experiment-panel {
+    margin-top: 38px;
+    padding: 30px;
+    border: 1px solid var(--rule);
+    background: var(--parchment-light);
+}
+
+.experiment-intro { max-width: 740px; }
+
+.experiment-intro h3, .evidence-heading h3 {
+    margin: 5px 0 10px;
+    color: var(--wine);
+    font-family: var(--display);
+    font-size: 1.6em;
+}
+
+.experiment-intro p:last-child { margin: 0; color: var(--ink-soft); }
+
+.method-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin: 30px 0;
+    padding: 1px;
+    background: var(--rule);
+    list-style: none;
+}
+
+.method-steps li {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 10px;
+    padding: 20px;
+    background: var(--parchment-light);
+}
+
+.method-steps h4 {
+    margin: 0 0 5px;
+    font-family: var(--display);
+    font-size: 1.1em;
+}
+
+.method-steps p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.85em;
+}
+
+.limits-note {
+    padding: 17px 20px;
+    border-left: 2px solid var(--wine);
+    background: rgba(122, 46, 39, 0.06);
+    color: var(--ink-soft);
+    font-size: 0.9em;
+}
+
+.limits-note p { margin: 0; }
+
+.limits-title {
+    margin-bottom: 5px !important;
+    color: var(--wine);
+    font-variant: small-caps;
+}
+
+.evidence-block { margin-top: 48px; }
+
+.evidence-scale {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin: 20px 0 0;
+    padding: 1px;
+    background: var(--rule);
+    list-style: none;
+}
+
+.evidence-scale li {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    background: var(--parchment-light);
+}
+
+.evidence-level {
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--bronze);
+    color: var(--wine);
+    font-size: 0.7em;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+}
+
+.evidence-scale strong {
+    margin-bottom: 7px;
+    font-family: var(--display);
+    line-height: 1.25;
+}
+
+.evidence-scale li > span:last-child { color: var(--ink-soft); font-size: 0.8em; }
+
+.evidence-attested, .evidence-supported, .evidence-plausible, .evidence-unknown { min-width: 0; }
+
+.manuscript-page .source-note {
+    margin: -15px 0 55px;
+    padding-top: 17px;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85em;
+    font-style: italic;
+    text-align: center;
+}
+
+.manuscript-page .source-note p { max-width: 780px; margin: 0 auto; }
+
+/* 6. DIALOGUES ET TRANSCRIPTIONS */
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 36px 28px 64px;
+}
+
+.sidebar {
+    position: sticky;
+    top: 24px;
+    flex: 0 0 190px;
+    max-height: calc(100vh - 48px);
+    padding-right: 18px;
+    border-right: 1px solid var(--rule);
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--wine);
+    font-size: 1em;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar li { border-bottom: 1px solid var(--rule); }
+
+.sidebar li:last-child { border-bottom: 0; }
+
+.sidebar a {
+    display: block;
+    padding: 8px 2px 8px 8px;
+    border-left: 2px solid transparent;
+    color: var(--ink-soft);
+    font-size: 0.86em;
+    line-height: 1.3;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover, .sidebar a.is-active {
+    padding-left: 12px;
+    border-left-color: var(--wine);
+    color: var(--wine);
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    text-align: justify;
+}
+
+.page-title {
+    margin: 0 0 8px;
+    color: var(--ink);
+    font-family: var(--display);
+    font-size: 2.1em;
+    font-weight: 600;
+}
+
+.page-title::after {
+    display: block;
+    width: 64px;
+    height: 2px;
+    margin-top: 12px;
+    background: var(--wine);
+    content: "";
+}
+
+.article { margin-top: 28px; }
+
+.article p { margin: 0 0 1.1em; }
+
+.article b, .article strong { color: var(--wine); font-weight: 600; }
+
+.article ul, .article ol { margin: 0.6em 0 1.2em; padding-left: 1.4em; }
+
+.article li { margin-bottom: 0.5em; }
+
+.article ol {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: piece;
+}
+
+.article ol li {
+    position: relative;
+    padding-left: 2.2em;
+    counter-increment: piece;
+}
+
+.article ol li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--wine);
+    content: counter(piece);
+    font-family: var(--display);
+    font-weight: 600;
+}
+
+.dialogue-subtitle {
+    margin: 0 0 8px;
+    color: var(--ink-soft);
+    font-family: var(--display);
+    font-size: 1.15em;
+    font-style: italic;
+}
+
+.image-hint {
+    margin: 12px 0 0;
+    color: var(--bronze);
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+.folio {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+    align-items: start;
+    gap: 28px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+}
+
+.folio:first-of-type { padding-top: 0; border-top: 0; }
+
+.folio-image {
+    position: sticky;
+    top: 24px;
+    margin: 0;
+}
+
+.folio-image img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid var(--rule);
+    background: var(--parchment-light);
+    box-shadow: 0 6px 18px rgba(58, 46, 34, 0.18);
+    cursor: zoom-in;
+}
+
+.folio-image figcaption {
+    margin-top: 8px;
+    color: var(--bronze);
+    font-family: var(--display);
+    font-size: 0.9em;
+    font-style: italic;
+    text-align: center;
+}
+
+.folio-text { text-align: justify; }
+
+.folio-text p { margin: 0 0 1em; }
+
+.folio-text .speaker {
+    margin: 1.2em 0 0.15em;
+    color: var(--wine);
+    font-family: var(--display);
+    font-variant: small-caps;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.folio-text .speaker:first-child { margin-top: 0; }
+
+.stage-direction {
+    color: var(--ink-soft);
+    font-style: italic;
+    text-align: left;
+}
+
+/* Mot ou passage concerné par une note critique : aucun appel de note n'est affiché. */
+.critical-note {
+    position: relative;
+    border-bottom: 1px dotted var(--wine);
+    cursor: help;
+}
+
+.critical-tooltip {
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    bottom: calc(100% + 0.55rem);
+    width: min(30rem, calc(100vw - 2rem));
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--rule);
+    background: var(--parchment-light);
+    box-shadow: 0 5px 16px var(--shadow);
+    color: var(--ink);
+    cursor: text;
+    font-family: var(--body);
+    font-size: 0.88rem;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1.4;
+    opacity: 0;
+    pointer-events: none;
+    text-align: left;
+    transform: translateY(0.25rem);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    visibility: hidden;
+}
+
+.critical-note:hover .critical-tooltip,
+.critical-note:focus .critical-tooltip {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.critical-note:focus-visible {
+    outline: 2px solid var(--wine);
+    outline-offset: 3px;
+}
+
+.image-dialog {
+    width: min(94vw, 1400px);
+    max-width: none;
+    max-height: 94vh;
+    padding: 44px 14px 14px;
+    border: 1px solid var(--rule);
+    background: var(--parchment-light);
+}
+
+.image-dialog::backdrop { background: rgba(30, 24, 18, 0.88); }
+
+.image-dialog img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(94vh - 60px);
+    margin: auto;
+}
+
+.image-dialog-close {
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--wine);
+    cursor: pointer;
+    font-family: var(--display);
+    font-size: 2em;
+    line-height: 1;
+}
+
+/* 7. ADAPTATION AUX PETITS ÉCRANS */
+
+@media (max-width: 1080px) {
+    .header { flex-wrap: wrap; justify-content: center; }
+
+    .brand { margin-right: 0; }
+
+    nav.menu { order: 3; width: 100%; }
+
+    .container { gap: 22px; padding-right: 20px; padding-left: 20px; }
+
+    .sidebar { flex-basis: 175px; padding-right: 14px; }
+
+    .folio { grid-template-columns: 1fr 1fr; gap: 22px; }
+
+    /* Sur tablette et téléphone, la note reste entièrement visible en bas. */
+    .critical-tooltip {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        left: 1rem;
+        width: auto;
+        max-height: 45vh;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .metadata-grid, .evidence-scale { grid-template-columns: repeat(2, 1fr); }
+
+    .container { flex-direction: column; gap: 32px; }
+
+    .sidebar {
+        position: static;
+        flex: none;
+        width: 100%;
+        max-height: none;
+        padding-right: 0;
+        padding-bottom: 20px;
+        border-right: 0;
+        border-bottom: 1px solid var(--rule);
+        overflow-y: visible;
+    }
+
+    .sidebar ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 18px;
+    }
+
+    .folio-image { position: static; }
+}
+
+@media (max-width: 760px) {
+    body { font-size: 17px; }
+
+    body > main { padding-right: 20px; padding-left: 20px; }
+
+    .header {
+        gap: 10px 18px;
+        padding: 14px 18px;
+        text-align: center;
+    }
+
+    .brand { width: 100%; justify-content: center; }
+
+    nav.menu { flex-wrap: wrap; gap: 0 5px; }
+
+    .menu-link { margin: 0 4px; font-size: 0.87em; }
+
+    .language-switcher { padding-left: 10px; }
+
+    .hero { padding: 62px 0 38px; }
+
+    .hero h1 { font-size: clamp(2.75rem, 15vw, 4.1rem); line-height: 0.92; }
+
+    .subtitle { margin-top: 25px; font-size: 1.05em; }
+
+    .introduction { padding-top: 42px; }
+
+    .introduction-copy, .article-body, .manuscript-lead, .prose-block, .main-content, .folio-text {
+        text-align: left;
+    }
+
+    .drop-cap::first-letter { font-size: 3em; }
+
+    .edition-note { margin-bottom: 50px; padding: 16px 18px 16px 20px; }
+
+    .gateways,
+    .context-grid,
+    .map-grid,
+    .section-index,
+    .metadata-grid,
+    .chronology,
+    .witness-grid,
+    .method-steps,
+    .evidence-scale,
+    .folio {
+        grid-template-columns: 1fr;
+    }
+
+    .context-hero, .article-header { padding: 52px 0 36px; }
+
+    .context-card { padding: 18px; }
+
+    .manuscript-hero { padding: 55px 0 42px; }
+
+    .hero-actions, .experiment-actions { flex-direction: column; }
+
+    .action-link { width: 100%; }
+
+    .section-index { margin-bottom: 55px; }
+
+    .section-index a + a { border-top: 1px solid var(--rule); border-left: 0; }
+
+    .manuscript-section { padding-bottom: 60px; }
+
+    .manuscript-section + .manuscript-section { padding-top: 52px; }
+
+    .manuscript-title-quote, .witness-card, .experiment-panel { padding: 20px; }
+
+    .sidebar ul { grid-template-columns: 1fr; }
+
+    .folio-image img { max-width: 440px; }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
+}

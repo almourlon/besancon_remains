@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--
+    Cette page présente le BMB Ms 1054 sous trois angles : sa description matérielle,
+    sa constitution comme recueil et l’identification probable de son copiste.
+    Les textes anglais et français sont stockés dans les attributs data-en et data-fr.
+    Le fichier language.js relié à cette page affiche la langue choisie, adapte les libellés
+    d’accessibilité et mémorise la préférence dans le navigateur.
+    Tous les styles du site, y compris les notices, la chronologie et les encadrés
+    propres à cette rubrique, sont regroupés dans styles.css.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Material description, compilation history and palaeographical study of BMB Ms 1054, a collection of Bisontin dialogues compiled in 1715.">
+    <title>The Manuscript — For All Its Changes, Besançon Remains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="language.js" defer></script>
+</head>
+<body data-en-title="The Manuscript — For All Its Changes, Besançon Remains" data-fr-title="Le manuscrit — For All Its Changes, Besançon Remains">
+
+    <header class="header">
+        <a class="brand" href="index.html" aria-label="For All Its Changes, Besançon Remains — Home">
+            <span class="brand-mark" aria-hidden="true">❧</span>
+            <span class="title">Besançon Remains</span>
+        </a>
+
+        <nav class="menu" aria-label="Main navigation" data-en-label="Main navigation" data-fr-label="Navigation principale">
+            <a href="index.html" class="menu-link" data-en="Home" data-fr="Accueil">Home</a>
+            <a href="dialogues.html" class="menu-link" data-en="Dialogues" data-fr="Dialogues">Dialogues</a>
+            <a href="contexte.html" class="menu-link" data-en="Historical Context" data-fr="Contexte historique">Historical Context</a>
+            <a href="manuscrit.html" class="menu-link is-active" aria-current="page" data-en="The Manuscript" data-fr="Le manuscrit">The Manuscript</a>
+        </nav>
+
+        <div class="language-switcher" role="group" aria-label="Language" data-en-label="Language" data-fr-label="Langue">
+            <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+            <span aria-hidden="true">/</span>
+            <button class="language-button" type="button" data-language="fr" aria-pressed="false">FR</button>
+        </div>
+    </header>
+
+    <main class="manuscript-page">
+        <section class="manuscript-hero" aria-labelledby="manuscript-title">
+            <p class="eyebrow" data-en="BMB Ms 1054 · Besançon Municipal Library" data-fr="BMB Ms 1054 · Bibliothèque municipale de Besançon">BMB Ms 1054 · Besançon Municipal Library</p>
+            <h1 id="manuscript-title" data-en="The Manuscript" data-fr="Le manuscrit">The Manuscript</h1>
+            <p class="manuscript-lead" data-en="A small volume compiled in 1715 preserves more than a century of Bisontin voices. Its material form, the order of its texts and the hand that copied them are all part of the history reconstructed by this edition." data-fr="Un petit volume compilé en 1715 conserve plus d’un siècle de voix bisontines. Sa forme matérielle, l’ordre de ses textes et la main qui les a copiés appartiennent pleinement à l’histoire que cette édition cherche à reconstruire.">A small volume compiled in 1715 preserves more than a century of Bisontin voices. Its material form, the order of its texts and the hand that copied them are all part of the history reconstructed by this edition.</p>
+
+            <div class="hero-actions">
+                <a class="action-link action-link-primary" href="https://memoirevive.besancon.fr/ark:/48565/nqk8zcrh9w4j" target="_blank" rel="noopener noreferrer">
+                    <span data-en="View the digitised manuscript" data-fr="Consulter le manuscrit numérisé">View the digitised manuscript</span>
+                    <span aria-hidden="true">↗</span>
+                </a>
+                <a class="action-link" href="https://almourlon.github.io/ouiouibaguette/" target="_blank" rel="noopener noreferrer">
+                    <span data-en="Open the palaeographical experiment" data-fr="Ouvrir l’expérience paléographique">Open the palaeographical experiment</span>
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <nav class="section-index" aria-label="On this page" data-en-label="On this page" data-fr-label="Sur cette page">
+            <a href="#codex">
+                <span class="section-index-number" aria-hidden="true">I</span>
+                <span data-en="The Codex" data-fr="Le codex">The Codex</span>
+            </a>
+            <a href="#compilation">
+                <span class="section-index-number" aria-hidden="true">II</span>
+                <span data-en="The Compilation" data-fr="La compilation">The Compilation</span>
+            </a>
+            <a href="#hands">
+                <span class="section-index-number" aria-hidden="true">III</span>
+                <span data-en="Hands and Transmission" data-fr="Mains et transmission">Hands and Transmission</span>
+            </a>
+        </nav>
+
+        <section class="manuscript-section" id="codex" aria-labelledby="codex-title">
+            <div class="section-heading manuscript-section-heading">
+                <p class="section-number" aria-hidden="true">I</p>
+                <div>
+                    <p class="section-kicker" data-en="Material description" data-fr="Description matérielle">Material description</p>
+                    <h2 id="codex-title" data-en="The Codex" data-fr="Le codex">The Codex</h2>
+                </div>
+            </div>
+
+            <dl class="metadata-grid">
+                <div>
+                    <dt data-en="Shelfmark" data-fr="Cote">Shelfmark</dt>
+                    <dd>BMB Ms 1054</dd>
+                </div>
+                <div>
+                    <dt data-en="Compilation date" data-fr="Date de compilation">Compilation date</dt>
+                    <dd>1715</dd>
+                </div>
+                <div>
+                    <dt data-en="Extent" data-fr="Étendue">Extent</dt>
+                    <dd data-en="126 folios" data-fr="126 feuillets">126 folios</dd>
+                </div>
+                <div>
+                    <dt data-en="Dimensions" data-fr="Dimensions">Dimensions</dt>
+                    <dd>190 × 120 mm</dd>
+                </div>
+                <div>
+                    <dt data-en="Binding" data-fr="Reliure">Binding</dt>
+                    <dd data-en="Parchment cover" data-fr="Couverture de parchemin">Parchment cover</dd>
+                </div>
+                <div>
+                    <dt data-en="Contents" data-fr="Contenu">Contents</dt>
+                    <dd data-en="Nine texts" data-fr="Neuf textes">Nine texts</dd>
+                </div>
+                <div>
+                    <dt data-en="Genres" data-fr="Genres">Genres</dt>
+                    <dd data-en="Six dialogues, two monologues, one occasional poem" data-fr="Six dialogues, deux monologues et une pièce de vers de circonstance">Six dialogues, two monologues, one occasional poem</dd>
+                </div>
+                <div>
+                    <dt data-en="Languages" data-fr="Langues">Languages</dt>
+                    <dd data-en="French, Bisontin patois and Latin marginal sententiae" data-fr="Français, patois bisontin et sentences marginales latines">French, Bisontin patois and Latin marginal sententiae</dd>
+                </div>
+            </dl>
+
+            <div class="prose-block">
+                <p data-en="The manuscript is held by the Bibliothèque municipale de Besançon and is available online through its Mémoire vive digital library. Its title describes the volume as a collection made in Besançon in 1715:" data-fr="Le manuscrit est conservé à la Bibliothèque municipale de Besançon et consultable en ligne sur la bibliothèque numérique Mémoire vive. Son titre présente explicitement le volume comme un recueil constitué à Besançon en 1715 :">The manuscript is held by the Bibliothèque municipale de Besançon and is available online through its Mémoire vive digital library. Its title describes the volume as a collection made in Besançon in 1715:</p>
+
+                <blockquote class="manuscript-title-quote" lang="fr">
+                    <p>Plusieurs dialogues, tant en françois qu’en patois, sur Besançon, receullis audit lieu l’an de grâce 1715</p>
+                </blockquote>
+
+                <p data-en="Its modest format contrasts with the variety of the collection. Alongside winegrowers, magistrates and a king, several monuments of Besançon are personified and allowed to speak. Latin sententiae written in the margins of the final two dialogues introduce a more learned register beside the French and local patois of the main texts." data-fr="Le format modeste du volume contraste avec la variété du recueil. Aux côtés de vignerons, de magistrats et d’un roi, plusieurs monuments de Besançon sont personnifiés et prennent la parole. Des sentences latines inscrites dans les marges des deux derniers dialogues introduisent un registre plus savant à côté du français et du patois local des textes principaux.">Its modest format contrasts with the variety of the collection. Alongside winegrowers, magistrates and a king, several monuments of Besançon are personified and allowed to speak. Latin sententiae written in the margins of the final two dialogues introduce a more learned register beside the French and local patois of the main texts.</p>
+            </div>
+        </section>
+
+        <section class="manuscript-section" id="compilation" aria-labelledby="compilation-title">
+            <div class="section-heading manuscript-section-heading">
+                <p class="section-number" aria-hidden="true">II</p>
+                <div>
+                    <p class="section-kicker" data-en="Several histories in one volume" data-fr="Plusieurs histoires dans un même volume">Several histories in one volume</p>
+                    <h2 id="compilation-title" data-en="The Compilation" data-fr="La compilation">The Compilation</h2>
+                </div>
+            </div>
+
+            <div class="prose-block">
+                <p data-en="The date 1715 belongs to the surviving collection, not necessarily to every work it contains. The nine pieces are not arranged according to the chronology of the events they represent. Their subjects extend from Henri IV’s campaign against Besançon in 1595 to the celebrations of the peace of 1714, and their present order may simply reflect the sequence in which exemplars reached the compiler." data-fr="La date de 1715 est celle du recueil conservé, non nécessairement celle de chacune des œuvres qu’il contient. Les neuf pièces ne suivent pas la chronologie des événements qu’elles représentent. Leurs sujets s’étendent de la campagne d’Henri IV contre Besançon en 1595 aux célébrations de la paix de 1714, et leur ordre actuel peut simplement refléter celui dans lequel les modèles sont parvenus au compilateur.">The date 1715 belongs to the surviving collection, not necessarily to every work it contains. The nine pieces are not arranged according to the chronology of the events they represent. Their subjects extend from Henri IV’s campaign against Besançon in 1595 to the celebrations of the peace of 1714, and their present order may simply reflect the sequence in which exemplars reached the compiler.</p>
+            </div>
+
+            <ol class="chronology" aria-label="Dates that must be distinguished" data-en-label="Dates that must be distinguished" data-fr-label="Dates qu’il faut distinguer">
+                <li>
+                    <span class="chronology-date">1595–1714</span>
+                    <span class="chronology-title" data-en="Events represented" data-fr="Événements représentés">Events represented</span>
+                    <span class="chronology-text" data-en="The dates staged or named by the texts." data-fr="Les dates mises en scène ou mentionnées par les textes.">The dates staged or named by the texts.</span>
+                </li>
+                <li>
+                    <span class="chronology-date">1668 / 1695</span>
+                    <span class="chronology-title" data-en="Earlier witnesses" data-fr="Témoins antérieurs">Earlier witnesses</span>
+                    <span class="chronology-text" data-en="Evidence that some pieces circulated independently." data-fr="La preuve que certaines pièces circulaient indépendamment.">Evidence that some pieces circulated independently.</span>
+                </li>
+                <li>
+                    <span class="chronology-date">1715</span>
+                    <span class="chronology-title" data-en="Surviving compilation" data-fr="Compilation conservée">Surviving compilation</span>
+                    <span class="chronology-text" data-en="The moment when the nine pieces were copied together in Ms 1054." data-fr="Le moment où les neuf pièces ont été copiées ensemble dans le Ms 1054.">The moment when the nine pieces were copied together in Ms 1054.</span>
+                </li>
+            </ol>
+
+            <div class="witness-grid">
+                <article class="witness-card">
+                    <p class="witness-label" data-en="Printed witness P" data-fr="Témoin imprimé P">Printed witness P</p>
+                    <p class="witness-date">1668</p>
+                    <h3 data-en="The Pillory and the Porte Noire" data-fr="Le Pilori et la Porte Noire">The Pillory and the Porte Noire</h3>
+                    <p data-en="An independent printed version proves that this dialogue circulated almost half a century before Ms 1054. Its readings differ from those of the manuscript, including in some explicitly anti-French passages." data-fr="Une version imprimée indépendante prouve que ce dialogue circulait près d’un demi-siècle avant le Ms 1054. Ses leçons diffèrent de celles du manuscrit, notamment dans certains passages explicitement hostiles aux Français.">An independent printed version proves that this dialogue circulated almost half a century before Ms 1054. Its readings differ from those of the manuscript, including in some explicitly anti-French passages.</p>
+                </article>
+
+                <article class="witness-card">
+                    <p class="witness-label" data-en="Manuscript witness Z" data-fr="Témoin manuscrit Z">Manuscript witness Z</p>
+                    <p class="witness-date">1695</p>
+                    <h3 data-en="The final two dialogues" data-fr="Les deux derniers dialogues">The final two dialogues</h3>
+                    <p data-en="Ms Z 428 preserves earlier versions of the final dialogues. Variants range from individual words and lines to stage directions found in Z but absent from the 1715 copy." data-fr="Le Ms Z 428 conserve des versions antérieures des deux derniers dialogues. Les variantes vont de mots ou de vers isolés à des didascalies présentes dans Z mais absentes de la copie de 1715.">Ms Z 428 preserves earlier versions of the final dialogues. Variants range from individual words and lines to stage directions found in Z but absent from the 1715 copy.</p>
+                </article>
+            </div>
+
+            <div class="prose-block prose-block-after-cards">
+                <p data-en="Ms 1054 is therefore a point of convergence rather than the original context of every text. The surviving witnesses establish several distinct textual histories, but they do not reveal every intermediate stage. The authors of the nine pieces remain anonymous." data-fr="Le Ms 1054 constitue donc un point de convergence plutôt que le contexte d’origine de chacun des textes. Les témoins conservés permettent d’établir plusieurs histoires textuelles distinctes, sans en révéler toutes les étapes intermédiaires. Les auteurs des neuf pièces restent anonymes.">Ms 1054 is therefore a point of convergence rather than the original context of every text. The surviving witnesses establish several distinct textual histories, but they do not reveal every intermediate stage. The authors of the nine pieces remain anonymous.</p>
+
+                <p class="inline-link-paragraph">
+                    <a href="dialogues.html" class="text-link">
+                        <span data-en="Explore the nine texts and their transcriptions" data-fr="Explorer les neuf textes et leurs transcriptions">Explore the nine texts and their transcriptions</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section class="manuscript-section" id="hands" aria-labelledby="hands-title">
+            <div class="section-heading manuscript-section-heading">
+                <p class="section-number" aria-hidden="true">III</p>
+                <div>
+                    <p class="section-kicker" data-en="Attributing the copy" data-fr="Attribuer la copie">Attributing the copy</p>
+                    <h2 id="hands-title" data-en="Hands and Transmission" data-fr="Mains et transmission">Hands and Transmission</h2>
+                </div>
+            </div>
+
+            <div class="prose-block">
+                <p data-en="An ex libris in Ms 1054 names Pierre-François Barberot, a lawyer at the Parlement and a citizen of Besançon. Ownership alone does not identify a copyist. A second manuscript, however, provides a basis for comparison: BMB Ms 1007 contains writing associated with Barberot, and its general appearance and individual letter forms closely resemble the hand of Ms 1054." data-fr="Un ex-libris du Ms 1054 porte le nom de Pierre-François Barberot, avocat au parlement et citoyen de Besançon. La propriété d’un volume ne suffit pas à identifier son copiste. Un second manuscrit fournit toutefois un point de comparaison : le BMB Ms 1007 contient une écriture associée à Barberot, dont l’aspect général et les formes de lettres ressemblent étroitement à la main du Ms 1054.">An ex libris in Ms 1054 names Pierre-François Barberot, a lawyer at the Parlement and a citizen of Besançon. Ownership alone does not identify a copyist. A second manuscript, however, provides a basis for comparison: BMB Ms 1007 contains writing associated with Barberot, and its general appearance and individual letter forms closely resemble the hand of Ms 1054.</p>
+            </div>
+
+            <div class="experiment-panel">
+                <div class="experiment-intro">
+                    <p class="experiment-label" data-en="Exploratory digital comparison" data-fr="Comparaison numérique exploratoire">Exploratory digital comparison</p>
+                    <h3 data-en="Testing the palaeographical impression" data-fr="Mettre à l’épreuve l’impression paléographique">Testing the palaeographical impression</h3>
+                    <p data-en="The experiment compares samples from Ms 1007 and Ms 1054. It was designed to support visual examination, not to replace it or to function as an automatic identification of the scribe." data-fr="L’expérience compare des échantillons des Ms 1007 et 1054. Elle vise à compléter l’examen visuel, non à le remplacer ni à fonctionner comme une identification automatique du scripteur.">The experiment compares samples from Ms 1007 and Ms 1054. It was designed to support visual examination, not to replace it or to function as an automatic identification of the scribe.</p>
+                </div>
+
+                <ol class="method-steps">
+                    <li>
+                        <span class="method-number">01</span>
+                        <div>
+                            <h4 data-en="Comparable contexts" data-fr="Contextes comparables">Comparable contexts</h4>
+                            <p data-en="Seven words occurring in both manuscripts were selected so that cursive letters could be studied in similar contexts." data-fr="Sept mots présents dans les deux manuscrits ont été retenus afin d’étudier les lettres cursives dans des contextes similaires.">Seven words occurring in both manuscripts were selected so that cursive letters could be studied in similar contexts.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="method-number">02</span>
+                        <div>
+                            <h4 data-en="A small corpus" data-fr="Un corpus restreint">A small corpus</h4>
+                            <p data-en="Sixty-four characters were extracted from each manuscript: 128 letter images in total." data-fr="Soixante-quatre caractères ont été extraits de chaque manuscrit, soit 128 images de lettres au total.">Sixty-four characters were extracted from each manuscript: 128 letter images in total.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="method-number">03</span>
+                        <div>
+                            <h4 data-en="Image preparation" data-fr="Préparation des images">Image preparation</h4>
+                            <p data-en="The characters were binarised, resized, centred and converted into pixel vectors." data-fr="Les caractères ont été binarisés, redimensionnés, centrés puis convertis en vecteurs de pixels.">The characters were binarised, resized, centred and converted into pixel vectors.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="method-number">04</span>
+                        <div>
+                            <h4 data-en="Similarity measurement" data-fr="Mesure de similarité">Similarity measurement</h4>
+                            <p data-en="Cosine similarity was calculated between the corresponding forms. Many scores exceeded 0.75; some approached or surpassed 0.90." data-fr="La similarité cosinus a été calculée entre les formes correspondantes. De nombreux scores dépassent 0,75 ; certains approchent ou dépassent 0,90.">Cosine similarity was calculated between the corresponding forms. Many scores exceeded 0.75; some approached or surpassed 0.90.</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <aside class="limits-note">
+                    <p class="limits-title" data-en="What the experiment cannot prove" data-fr="Ce que l’expérience ne peut pas prouver">What the experiment cannot prove</p>
+                    <p data-en="The sample is small, pixel comparison is sensitive to scale and position, and one writer’s forms naturally vary. The results are therefore corroborative, not demonstrative: they support the visual comparison but cannot establish scribal identity on their own." data-fr="L’échantillon est restreint, la comparaison de pixels est sensible à l’échelle et à la position, et les formes produites par une même personne varient naturellement. Les résultats sont donc corroboratifs et non démonstratifs : ils confortent la comparaison visuelle, mais ne peuvent établir seuls l’identité du copiste.">The sample is small, pixel comparison is sensitive to scale and position, and one writer’s forms naturally vary. The results are therefore corroborative, not demonstrative: they support the visual comparison but cannot establish scribal identity on their own.</p>
+                </aside>
+
+                <div class="experiment-actions">
+                    <a class="action-link action-link-primary" href="https://almourlon.github.io/ouiouibaguette/" target="_blank" rel="noopener noreferrer">
+                        <span data-en="Explore the results and visual comparisons" data-fr="Explorer les résultats et les comparaisons visuelles">Explore the results and visual comparisons</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                    <a class="action-link" href="https://github.com/almourlon/ouiouibaguette" target="_blank" rel="noopener noreferrer">
+                        <span data-en="View the code and data" data-fr="Voir le code et les données">View the code and data</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="evidence-block" aria-labelledby="evidence-title">
+                <div class="evidence-heading">
+                    <p class="section-kicker" data-en="Degrees of certainty" data-fr="Degrés de certitude">Degrees of certainty</p>
+                    <h3 id="evidence-title" data-en="What the evidence supports" data-fr="Ce que les sources permettent d’affirmer">What the evidence supports</h3>
+                </div>
+
+                <ol class="evidence-scale">
+                    <li class="evidence-attested">
+                        <span class="evidence-level" data-en="Attested" data-fr="Attesté">Attested</span>
+                        <strong data-en="Barberot owned Ms 1054." data-fr="Barberot a possédé le Ms 1054.">Barberot owned Ms 1054.</strong>
+                        <span data-en="His ex libris appears in the volume." data-fr="Son ex-libris figure dans le volume.">His ex libris appears in the volume.</span>
+                    </li>
+                    <li class="evidence-supported">
+                        <span class="evidence-level" data-en="Strongly supported" data-fr="Fortement étayé">Strongly supported</span>
+                        <strong data-en="Barberot copied Ms 1054." data-fr="Barberot a copié le Ms 1054.">Barberot copied Ms 1054.</strong>
+                        <span data-en="Visual and exploratory digital comparisons with Ms 1007 point to the same hand." data-fr="Les comparaisons visuelle et numérique exploratoire avec le Ms 1007 indiquent une même main.">Visual and exploratory digital comparisons with Ms 1007 point to the same hand.</span>
+                    </li>
+                    <li class="evidence-plausible">
+                        <span class="evidence-level" data-en="Plausible" data-fr="Plausible">Plausible</span>
+                        <strong data-en="Barberot assembled the surviving collection." data-fr="Barberot a assemblé le recueil conservé.">Barberot assembled the surviving collection.</strong>
+                        <span data-en="The consistent hand, ownership and title make this likely, but do not prove how the pieces were selected or ordered." data-fr="L’unité de la main, la propriété et le titre rendent cette hypothèse vraisemblable, sans prouver comment les pièces ont été choisies ou ordonnées.">The consistent hand, ownership and title make this likely, but do not prove how the pieces were selected or ordered.</span>
+                    </li>
+                    <li class="evidence-unknown">
+                        <span class="evidence-level" data-en="Not established" data-fr="Non établi">Not established</span>
+                        <strong data-en="Barberot authored or revised the texts." data-fr="Barberot a composé ou remanié les textes.">Barberot authored or revised the texts.</strong>
+                        <span data-en="The individual authors remain unknown, and the surviving variants may derive from lost exemplars." data-fr="Les auteurs des pièces restent inconnus et les variantes conservées peuvent provenir de modèles aujourd’hui perdus.">The individual authors remain unknown, and the surviving variants may derive from lost exemplars.</span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <aside class="source-note">
+            <p data-en="All manuscript references and measurements on this page derive from the research undertaken for the critical-edition project. Digitised manuscripts are held and made available by the Bibliothèque municipale de Besançon." data-fr="Les références et mesures manuscrites présentées sur cette page proviennent des recherches menées pour le projet d’édition critique. Les manuscrits numérisés sont conservés et mis à disposition par la Bibliothèque municipale de Besançon.">All manuscript references and measurements on this page derive from the research undertaken for the critical-edition project. Digitised manuscripts are held and made available by the Bibliothèque municipale de Besançon.</p>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <span data-en="Student project · MA Rare Books and Digital Humanities · 2024–2026" data-fr="Projet étudiant · Master Rare Books and Digital Humanities · 2024–2026">Student project · MA Rare Books and Digital Humanities · 2024–2026</span>
+    </footer>
+
+
+</body>
+</html>
