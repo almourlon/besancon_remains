@@ -1,7 +1,4 @@
 /*
-    FEUILLE DE STYLE UNIQUE DU SITE
-    « For All Its Changes, Besançon Remains »
-
     Les règles sont classées par rubrique. Les adaptations responsive sont
     regroupées à la fin du fichier.
 
@@ -170,15 +167,9 @@ a, button { -webkit-tap-highlight-color: transparent; }
 
 a:focus-visible, button:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
 
-.source-note, .document-status { color: var(--ink-soft); }
+.source-note { color: var(--ink-soft); }
 
-/* Supprime les marges inutiles dans plusieurs petits blocs du site. */
-.source-note p,
-.edition-note p,
-.credit-note p,
-.map-figure,
-.manuscript-title-quote p,
-.limits-note p { margin: 0; }
+.source-note p { margin: 0; }
 
 /* 2. EN-TÊTE, NAVIGATION ET PIED DE PAGE */
 
@@ -350,7 +341,7 @@ nav.menu {
 
 .introduction-copy { margin-top: 22px; text-align: justify; }
 
-.introduction-copy p, .article p { margin: 0 0 1.1em; }
+.introduction-copy p { margin: 0 0 1.1em; }
 
 .drop-cap::first-letter {
     float: left;
@@ -372,6 +363,8 @@ nav.menu {
     font-size: 0.94em;
     font-style: italic;
 }
+
+.edition-note p, .credit-note p { margin: 0; }
 
 .edition-note .edition-note-label {
     margin-bottom: 7px;
@@ -448,7 +441,7 @@ nav.menu {
     text-align: left;
 }
 
-.gateway-title, .gateway-sub, .chronology span { display: block; }
+.gateway-title, .gateway-sub { display: block; }
 
 .gateway-title {
     color: var(--wine);
@@ -572,11 +565,11 @@ nav.menu {
 
 .article-body, .document-body { max-width: 780px; margin: auto; }
 
-.article-body, .folio-text { text-align: justify; }
+.article-body { text-align: justify; }
 
 .article-body p, .document-body p { margin: 0 0 1.15em; }
 
-.document-body h2 {
+.article-body h2, .document-body h2 {
     margin: 42px 0 16px;
     color: var(--wine);
     font-family: var(--display);
@@ -591,6 +584,10 @@ nav.menu {
     font-size: 0.92em;
 }
 
+.document-status { color: var(--ink-soft); }
+
+.document-status p { margin: 0; }
+
 .context-page .source-note p + p { margin-top: 8px; }
 
 .transcription {
@@ -599,7 +596,9 @@ nav.menu {
     text-align: left;
 }
 
-.transcription h2, .folio-text .speaker:first-child { margin-top: 0; }
+.transcription + .transcription { margin-top: 55px; }
+
+.transcription h2 { margin-top: 0; }
 
 blockquote {
     margin: 28px 0;
@@ -614,6 +613,8 @@ blockquote {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
+
+.map-figure { margin: 0; }
 
 .map-figure img {
     display: block;
@@ -677,11 +678,10 @@ blockquote {
 .hero-actions, .experiment-actions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
     margin-top: 28px;
 }
-
-.hero-actions { justify-content: center; }
 
 .experiment-actions { justify-content: flex-start; }
 
@@ -767,7 +767,7 @@ blockquote {
     text-align: justify;
 }
 
-.prose-block p, .folio-text p { margin: 0 0 1em; }
+.prose-block p { margin: 0 0 1em; }
 
 .metadata-grid {
     display: grid;
@@ -803,6 +803,8 @@ blockquote {
     text-align: center;
 }
 
+.manuscript-title-quote p { margin: 0; }
+
 .chronology {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -813,6 +815,8 @@ blockquote {
 }
 
 .chronology li { padding-top: 15px; border-top: 2px solid var(--bronze); }
+
+.chronology span { display: block; }
 
 .chronology-date, .witness-date {
     color: var(--wine);
@@ -911,6 +915,8 @@ blockquote {
     color: var(--ink-soft);
     font-size: 0.9em;
 }
+
+.limits-note p { margin: 0; }
 
 .limits-title {
     margin-bottom: 5px !important;
@@ -1051,6 +1057,36 @@ blockquote {
 
 .article { margin-top: 28px; }
 
+.article p { margin: 0 0 1.1em; }
+
+.article b, .article strong { color: var(--wine); font-weight: 600; }
+
+.article ul, .article ol { margin: 0.6em 0 1.2em; padding-left: 1.4em; }
+
+.article li { margin-bottom: 0.5em; }
+
+.article ol {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: piece;
+}
+
+.article ol li {
+    position: relative;
+    padding-left: 2.2em;
+    counter-increment: piece;
+}
+
+.article ol li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--wine);
+    content: counter(piece);
+    font-family: var(--display);
+    font-weight: 600;
+}
+
 .dialogue-subtitle {
     margin: 0 0 8px;
     color: var(--ink-soft);
@@ -1092,7 +1128,7 @@ blockquote {
     margin: 0 auto;
     border: 1px solid var(--rule);
     background: var(--parchment-light);
-    box-shadow: 0 6px 18px rgba(58, 46, 34, 0.18);
+    box-shadow: 0 6px 18px rgba(58, 46, 34, 0.18); 
     cursor: zoom-in;
 }
 
@@ -1105,6 +1141,10 @@ blockquote {
     text-align: center;
 }
 
+.folio-text { text-align: justify; }
+
+.folio-text p { margin: 0 0 1em; }
+
 .folio-text .speaker {
     margin: 1.2em 0 0.15em;
     color: var(--wine);
@@ -1114,6 +1154,8 @@ blockquote {
     letter-spacing: 0.04em;
     text-align: left;
 }
+
+.folio-text .speaker:first-child { margin-top: 0; }
 
 .stage-direction {
     color: var(--ink-soft);
@@ -1296,8 +1338,7 @@ blockquote {
     .witness-grid,
     .method-steps,
     .evidence-scale,
-    .folio,
-    .sidebar ul {
+    .folio {
         grid-template-columns: 1fr;
     }
 
@@ -1320,6 +1361,8 @@ blockquote {
     .manuscript-section + .manuscript-section { padding-top: 52px; }
 
     .manuscript-title-quote, .witness-card, .experiment-panel { padding: 20px; }
+
+    .sidebar ul { grid-template-columns: 1fr; }
 
     .folio-image img { max-width: 440px; }
 

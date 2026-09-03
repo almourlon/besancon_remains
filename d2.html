@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<!--
+    Cette page présente un texte du BMB Ms 1054 folio par folio :
+    l'image du manuscrit est placée à gauche et la transcription à droite.
+    dialogue-images.js agrandit une image lorsqu'on clique dessus.
+    language.js traduit l'interface, mais jamais la transcription.
+    Les passages en pointillé affichent leurs notes critiques au survol ou au focus.
+    Toute la mise en page du site reste regroupée dans styles.css.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogue second — Besançon Remains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="dialogue-images.js" defer></script>
+    <script src="language.js" defer></script>
+</head>
+<body data-en-title="Dialogue second — Besançon Remains" data-fr-title="Dialogue second — Besançon Remains">
+    <header class="header">
+        <a class="brand" href="index.html" aria-label="For All Its Changes, Besançon Remains — Home">
+            <span class="brand-mark" aria-hidden="true">❧</span>
+            <span class="title">Besançon Remains</span>
+        </a>
+
+        <nav class="menu" aria-label="Main navigation" data-en-label="Main navigation" data-fr-label="Navigation principale">
+            <a href="index.html" class="menu-link"><span data-lang="en">Home</span><span data-lang="fr" hidden>Accueil</span></a>
+            <a href="dialogues.html" class="menu-link is-active" aria-current="page">Dialogues</a>
+            <a href="contexte.html" class="menu-link"><span data-lang="en">Historical Context</span><span data-lang="fr" hidden>Contexte historique</span></a>
+            <a href="manuscrit.html" class="menu-link"><span data-lang="en">The Manuscript</span><span data-lang="fr" hidden>Le manuscrit</span></a>
+        </nav>
+
+        <div class="language-switcher" role="group" aria-label="Language" data-en-label="Language" data-fr-label="Langue">
+            <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+            <span aria-hidden="true">/</span>
+            <button class="language-button" type="button" data-language="fr" aria-pressed="false">FR</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2><span data-lang="en">Contents</span><span data-lang="fr" hidden>Sommaire</span></h2>
+            <ul>
+                <li><a href="testd1.html">Dialogue premier</a></li>
+                <li><a href="d5.html">Joie de Jaquemard</a></li>
+                <li><a href="d2.html" class="is-active" aria-current="page">Dialogue second</a></li>
+                <li><a href="d3.html">Dialogue troisième</a></li>
+                <li><a href="d4.html">Dialogue quatrième</a></li>
+                <li><a href="d6.html">Vers pour la paix</a></li>
+                <li><a href="d7.html">Description burlesque</a></li>
+                <li><a href="d8.html">Dialogue entre deux Comtois</a></li>
+                <li><a href="d9.html">Dispute de Jacquemart</a></li>
+                <li><a href="sentences-latines.html">Sentences latines</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1 class="page-title">Dialogue second</h1>
+            <p class="dialogue-subtitle">Entre le Pilory et Portenoire, sur la prise de Besançon par les François</p>
+            <p class="image-hint">
+                <span data-lang="en">Click a manuscript image to enlarge it.</span>
+                <span data-lang="fr" hidden>Cliquez sur une image du manuscrit pour l’agrandir.</span>
+            </p>
+            <p class="image-hint">
+                <span data-lang="en">Hover over, focus, or tap a dotted passage to display its critical note. P = 1668 printed witness.</span>
+                <span data-lang="fr" hidden>Survolez, sélectionnez au clavier ou touchez un passage en pointillé pour afficher sa note critique. P = témoin imprimé de 1668.</span>
+            </p>
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f008r.jpg" alt="Ms. 1054, f. 8r">
+                    <figcaption>Ms. 1054, f. 8r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p>Dialogue Second entre le pilorÿ et portenoire sur la prise de Besançon par les François</p>
+                    <p class="speaker">Portenoire</p>
+                    <p>Hêlas beau pilorÿ je me plains bien de toÿ<br>
+Tu ne m'a rien escrit depuis deux, ou trois mois,<br>
+ou est le souuenir que tu as des amÿs<br>
+dis moÿ me traitte tu comme ton ennemÿ<br>
+je suis toujours debout, pour scauoir des nouuelles,<br>
+mais tous mes messagers ne sont que dÿrondelle;<br>
+je uoudrois te parler, mais ma langue partout<br>
+s'accroche, et n'en scauroit jamais venir a bout,<br>
+l'on monte l'on desçent, sans me dire parole,<br>
+l'on me mepriseroit,si ce n'est les idoles<br>
+surprenans les passans, reueillant les idée,<br>
+touchant le souuenir de mon antiquité,<br>
+hélas que ueux je faire je n'entend que mâtin<br>
+qui repondent aux hiboux, le soir et le matin</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f008v.jpg" alt="Ms. 1054, f. 8v">
+                    <figcaption>Ms. 1054, f. 8v</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p>Uoilat les sarabandes de tant de uiolons,<br>
+sans conter au surplus les autres carillons,<br>
+enfin me rencontrant dans des temps si heureux,<br>
+je te prie par l'amour, qui est entre nous deux,<br>
+de raconter un peu ce changement de façe;<br>
+qui m'a presque esbranlé, et chassé de ma plaçe.</p>
+                    <p class="speaker">Pilorÿ</p>
+                    <p>Salut he magredoüe ueille sampiternelle<br>
+Se te ueut m'aicouta; uet panre ne scobelle,<br>
+ÿ men uaÿ enuamba lou soermon lou pu grand<br>
+que j'aimas las onclot eussint dit il-ÿ et cent ans<br>
+main deuant qui antoune ce discoüot cotaroux<br>
+ji fou presupousa que tous las loups uarrous,<br>
+quand uendu lou pais ai bé denie contant,<br>
+pensint de tout ce qui que ce n'en sere ran;<br>
+las laidres tés qui sont naiuint point de saruee,<br>
+pouchan qu'en moissonnan l'an poüed'hu getué<br>
+ji sembla qui uoulint ne fare que ne foire<br>
+das gens, das bestiaux, aussÿ ben que das uelles,<br>
+l'aiuint lou <span class="critical-note" tabindex="0">queménau<span class="critical-tooltip" role="tooltip">34. queménau : rendez vous P</span></span>  pou fare lou complot<br>
+si failla jüe das mains, ou paije lieu aiscot,<br>
+lon uenda in chaité, bin l'un coure et l'argent,<br>
+l'un deçet, l'autre delet on ne sa pas coument<br>
+las un demandins das titres de boirons,<br>
+cela houneür manquint, on bailla pension.<br>
+C'eta coume au piquet tout chaicun s'aicatte<br>
+las uolots de Caroüs traigint de tout couta<br>
+on manda das billets, das lettres et das paipiers,<br>
+poü dire as pelerins qui failla s'aiuancie<br>
+et pendant ce traiquet ÿ se tint las uaillans<br>
+deuant tas poüeres gens coume das chins couchants.</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f009r.jpg" alt="Ms. 1054, f. 9r">
+                    <figcaption>Ms. 1054, f. 9r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p><span class="critical-note" tabindex="0">Pacequi<span class="critical-tooltip" role="tooltip">46. Pacequi : Baste P</span></span> saiuint bin lou quantieme dÿ mois<br>
+qu'on deua compoüesa aiuoüe <span class="critical-note" tabindex="0">sas chins francets<span class="critical-tooltip" role="tooltip">47. sas chins francets : le roi français P</span></span><br>
+lou roÿ das hespaignes dé lÿ dent boune uie<br>
+qu'ot planta bin aiuant dans noüete amitié<br>
+n'éta pas infourma dece mainege cÿ<br>
+on n'en palas non put aj boume Roume qu'et Maidrit<br>
+si bin pour tous raclas et pou uite aippletie<br>
+on fa semblant d'olla querir lai milicie<br>
+ce jamais Besancon sot rendu uigilent<br>
+c'eta dans ce malheü que las petes et las grands,<br>
+uaroÿent pas las rües tretous l'épée au flanc<br>
+et las fannes dÿ bet, <span class="critical-note" tabindex="0">jerbeillins<span class="critical-tooltip" role="tooltip">56. jerbeillins : chaibeillin P</span></span> qui deuant<br>
+et pour te bin montra qu'on fesa son deuoit<br>
+las portes etins soutenus et toujoü qui uet let<br>
+larcheueque marcha audeuant das chaloines<br>
+las moines de st poüe, aussÿ laj m[a]ddeleines,<br>
+las pretres de st jean, et ceux de saint merÿ,<br>
+ceux de st pierre ollint auoüe lou st esprit,<br>
+<span class="critical-note" tabindex="0">uous eussint ueu les carmes, et les capucins,<br>
+qu'etins bin retroussa aiuoue las jaicoubins<span class="critical-tooltip" role="tooltip">40–41. capucins … jaicoubins : <em>inv.</em> P</span></span>,<br>
+las minimes filint, aiuoüe las coudelier,<br>
+et las benedictins marchint de compaignie<br>
+las peres jesuites, et las carmes deschaux,<br>
+samblint tout retroussa que l'ollint ai laissaut<br>
+tout lou monde eta prost chaicun s'eta pouruü<br>
+i nÿ manqua pu ran que lou pere reclus<br>
+on ne uiua quen po, et d'in coüe de mathié,<br>
+on eusse fa leua ceux qu'etins dedans lou lé</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f009v.jpg" alt="Ms. 1054, f. 9v">
+                    <figcaption>Ms. 1054, f. 9v</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p>on beilla das contrödes las rondes redoublint<br>
+on uoÿa repassa las bareilles de uins<br>
+chaicun sauua lou sien, las couffres de uaisselles,<br>
+las asemans d'outau, las pouchons, las aicüelles,<br>
+tanto dans la cauotes, tant dans las chanies,<br>
+ou bin dans las murots, ou bin dans las <span class="critical-note" tabindex="0">grenier<span class="critical-tooltip" role="tooltip">78. grenier : soulier P</span></span><br>
+pour moÿ qui ne m'enchaut d'ÿ brut das complot,<br>
+i beuillé tou las mo farme coume in tronchot<br>
+s'on uena demanda dÿ raifraichissement<br>
+ji distilo mas joües magré pé tous las uents<br>
+main grand düe grand ji fust ai ce jou de tenebres<br>
+et qu'on uoÿa ueni las françets sür lou uepres<br>
+chaicun se d'aipoüera qué regret qué pidie<br>
+encoüe las uns difint uoicÿ laj milicie<br>
+dare dare on sonnet uitement ai l'ailarme<br>
+lou monde se trouuaj sur lai plaiçe d'armes<br>
+quand on las uut tresit pou fare boune mine<br>
+on lachait uitement un coüe de couleurine<br>
+on aiuas d'aifandus as fammes de söethÿ<br>
+main lou diale jaima ne sus las retenir<br>
+et pou fare et saiuoit qui charchin Besançon<br>
+ji champoÿa deja pas la chams forgirons<br>
+ji s'etins raicouda pou nous fare grand po<br>
+ji filins montrant de lieu armé lou gro<br>
+in po cet in polet en charchant lai boichie<br>
+poüechan qui n'aiuint pas de trop joüe ran mangie<br>
+l'etint dessus l'aibrot tantot ai saint liena<br>
+ji courint ai uelotte, ai las autres ai chaipras<br>
+l'aillemin de groüe feu pou chauffa lieu onglottes<br>
+ji retissint das uiaux las tripes et las melottes</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f010r.jpg" alt="Ms. 1054, f. 10r">
+                    <figcaption>Ms. 1054, f. 10r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p>combin de cheuaux pris et de bins d'airoubas,<br>
+combin de pra gata, combin d'abre coüepas,<br>
+queques fois l'aiprechint lou pied das murailles<br>
+ontopa de grand doüe, en uoyant lieu bravades,<br>
+main ai ne point mentir, s'on eusse ousa tirie<br>
+j'aimas lou <span class="critical-note" tabindex="0">paitigos<span class="critical-tooltip" role="tooltip">108. paitigos : belle cible P</span></span>  ne fust meux uisie<br>
+enfin lou landemain de ste [cette] belle uenüe<br>
+que lou monde pria au mouties lou bon düe<br>
+las laidres enuierent ne trompette ai lai uelle<br>
+pou saiuoÿ s'on uoula ne pas ou ne quairelle<br>
+pou moÿ ji ne sait pas coume on cappituloit<br>
+te lou pouré aipanre de put scaiuant que moÿ<br>
+<span class="critical-note" tabindex="0">ji craignet d'offença ceux qui on mit lou na<br>
+silançe nous uorans de tous lai uerita<br>
+lou prince de stramberquet ot uenu dé marchÿ<br>
+ÿ lÿ aiua lontemps qu'on l'aittanda paschÿ<span class="critical-tooltip" role="tooltip">115–119 <em>om.</em> P</span></span></p>
+                    <p class="speaker">Portenoire</p>
+                    <p><span class="critical-note" tabindex="0">Ôi dieu ce changement me paroit si tragique<span class="critical-tooltip" role="tooltip">115–119 <em>om.</em> P</span></span><br>
+que je n'en uis jamais de pareils en afrique<br>
+quoÿ ces infidels apres tant de serments<br>
+qu'ils ont juré au roÿ on trahÿ lachement<br>
+par les traitres inhumains sans raison sans pru[-dence]<br>
+renonçant a l'hespagne pour complaire a la france<br>
+qui uous auoit forçé courage affoibli<br>
+de changer la toison contre trois fleurs de lÿs<br>
+allés mechants allés uous cacher sous la terre<br>
+aux ÿeux de l'univers, aux flammes du tonnerres,</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f010v.jpg" alt="Ms. 1054, f. 10v">
+                    <figcaption>Ms. 1054, f. 10v</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p>ouÿ l'ambition a causé uos malheurs<br>
+mais aucuns ne serat troublé de uos douleurs<br>
+n'attendés desormais les traits d'un heureux sort<br>
+le roÿ pour tout amour uous donnerat la mort<br>
+et toÿ ciel irrité qui uoit tous nos martires<br>
+ecoute seulement ceux qui pour toÿ soupire<br>
+fais donc la justice sans aucun retardement<br>
+signe aujourd'huÿ l'arrest de leurs bannissements<br>
+je consens qu'un boureau parmÿ cette auanture<br>
+sans forme de proçes les mette a la torture<br>
+c'est de toÿ pÿlorÿ que j'apprens tous cecÿ<br>
+car tu viens de me faire un si triste reçit<br>
+que je me detruirois si je n'étois bin forte<br>
+malgré le mal qui me transporte<br>
+pourtant ma guerison se trouue en ta puissance<br>
+poursuis et tu uerra la fin de mes soufrance<br>
+ma curiosité ne me rend point coupable<br>
+puisque je n'apprens rïen qui ne soit ueritable<br>
+uoilat donc le premier acte de trahisons<br>
+parle je te conjure ne crains point la prisons</p>
+                    <p class="speaker">Pÿlorÿ</p>
+                    <p>O Ste lisoboÿ te me rond las ourailles<br>
+uaj uaj te raicurier coume on fas las aicüelles<br>
+peute bin ueile aron m'aicouta sans pleura<br>
+et toÿ bé Besançon te bin enhorbouta<br>
+ma foÿ ji n'en peu pus; mai <span class="critical-note" tabindex="0">langue<span class="critical-tooltip" role="tooltip">153. langue : tété P</span></span> ot <span class="critical-note" tabindex="0">d'aimanchie<span class="critical-tooltip" role="tooltip">153. d’aimanchie : daimagie P</span></span><br>
+<span class="critical-note" tabindex="0">las hilots de mai tete, ne seuint put uirie<span class="critical-tooltip" role="tooltip">154. La ticlot de met langue ne serin pu virie P</span></span></p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f011r.jpg" alt="Ms. 1054, f. 11r">
+                    <figcaption>Ms. 1054, f. 11r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p>qu'on ne me pale put de joÿe ne de plaisit<br>
+nous uoiquÿ ai lolous, lou bons temps aj faillit<br>
+ceta das citoÿens que se mouquint das raits<br>
+las fannes de detpée s'en airachin lou poit<br>
+aidüe las uignerons que padrans lieü joüena<br>
+ji n'ierans pat as champs lou maitin que bin ta;<br>
+las chaipé des trenna lai tritte sentence<br>
+montran qui n'an pas fa lou tie de lieu uaillance<br>
+main ce qui repue pas ailoigÿ lieu faëdhé<br>
+et empochie d'entra lou prince de condé<br>
+sus donc qu'on se retire las uoicÿ las belitres<br>
+tous chargier de butin, de caisses, de marmittes,<br>
+ji cret que sot <span class="critical-note" tabindex="0">shölet<span class="critical-tooltip" role="tooltip">167. shölet : Calvin P</span></span> qu'aj ouurit las enfas<br>
+pou en fare soëtÿ, las diales daichainnas,<br>
+regäida sas piquiers reuetu de sa blanc<br>
+des lou co jusqu'au uentre pa darrie, pa deuant,<br>
+plaiçe as mousquetaire sans poudre et sans plom,<br>
+et qu'on laisse passa sas pêçes de cainnons<br>
+helas ji m'obusaj ce n'ost par das cainnons<br>
+ji n'aiuint ne char, ne charton,<br>
+main lou put bé triomphe c'éta de grand pannoüere<br>
+loÿe en das souche qui uoulint coüme loüere<br>
+las fifres, et las tamboürot menint in te saibet<br>
+qu'on croÿa que ceta lai féte das uarrets<br>
+las lairons coumencint ai champa das oeillade<br>
+tanto dessus las feilles, tanto dessus las fannes,<br>
+i sembla que l'aiuint tou groin de mé perÿ<br>
+las gens qu'en bin jüena ne sont pas si rentrÿ.</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f011v.jpg" alt="Ms. 1054, f. 11v">
+                    <figcaption>Ms. 1054, f. 11v</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p>sans maingie in gouré, ÿ montenent lai gäidhe<br>
+encoüot qui n'aiuint pas lai pance bin gaillade<br>
+aussÿtost que lÿ furent sans point pädre de temps<br>
+ji euoquin das molles ÿ fesint füe das dents<br>
+aipré lou uentre plain ceuena l'exercice<br>
+et das pouilles et das cents las bandes toutes grises<br>
+j'aimas tous las roumains ne firent si grand gare<br>
+ceux qui ne tuint pas, ÿ las champint pa tare,<br>
+si ne se baitint pas ÿ fumint dÿ toubac,<br>
+si n'aiuint point d'argent, ÿ uendint lieu bisac,<br>
+surtou ji sont etta nourÿ en boune aicole<br>
+i n'étins pas uouleu main l'empoütin lou mole<br>
+ji meritan pou scaiuoit jüe das mains<br>
+bon filou pou lai uie et fin magicien<br>
+ne me demande pas, ce qui fesint ailoutau<br>
+lai musique enraigie, s'entenda de prou haut<br>
+on eusse meu aima ne troupe de lÿons.<br>
+que de uöe sas gredins entra dans ne moeson<br>
+las hussie que fant bin las roulan chüe las gens<br>
+n'etins pas si dialeux que l'etins sas ganiments<br>
+pou scaiuoit <span class="critical-note" tabindex="0">remua lou pou de tröe et chauué<span class="critical-tooltip" role="tooltip"><em>ante</em> 203 <em>add.</em> P : Aittaichin et lieu cou da grou loupin de cuiure / Men iaima i nen pu aideuci sa polot / I failla teu la ioüot la mettre au cheuolot.</span></span><br>
+ou bin engoula ne couple de paté<br>
+ji s'eussint fas tua, main lou bru qui menint<br>
+s'eta quand las lougis lieu refusint dÿ uin<br>
+sas moleroux uoulint tout chaissie qui deuant<br>
+menaissint de mettre tout ai feu, tout ai sang,</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f012r.jpg" alt="Ms. 1054, f. 12r">
+                    <figcaption>Ms. 1054, f. 12r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p>on n'ousa pas soufla redire â ne bé<br>
+                        autrement l'etin prost daigainna l'espée<br>
+                        que'que fois marchandant ne liure de chandelle<br>
+                        sas ueillans champions en forgint ne querelle<br>
+                        au premier d'aimantÿ ji failla s'aitrillie<br>
+                        tipe tope das mains frique froque das pieds,<br>
+                        moÿ que n'a jamais uüt laj dançe maucabrée<br>
+                        c'éta bin ste fois qui, qui riso dans mai pé<br>
+                        lot uera qu'on m'ai bouta danc ne plaiçe publique<br>
+                        s'on ÿ dit das chansons, ÿ en prenoit das briques<br>
+                        pas ainsi tous las mô qu'on fesa sus lou pont<br>
+                        etint uitement scu de moÿ pas besançon<br>
+                        uoilet dont pôtte noire laj penture aicheuée<br>
+                        das mo que nous soufrin fete et genouurier<br>
+                        cecÿ ot bin uera ce n'ot pas das faigots<br>
+                        qu'on en preine ai sarman jaiquema mon onclot<br>
+                        fut n'homme de bin et qu'ai bin di credit<br>
+                        l'an ai dejai pala meu que jaj jaimas ji ne fit</p>
+                    <p class="speaker">Porte noire</p>
+                    <p>Sans doute je te crois je suis en connoissance<br>
+                        de ta fidelité et de ton innocence<br>
+                        ton discours est plaisant et bien assaisonné<br>
+                        plutarque et ciceron non pas mieu raisonné<br>
+                        j'admire ton esprit, secondant ton courage<br>
+                        qui a scüe essuÿee les flots de ses orages<br>
+                        je connois a present que l'on ne parle plus<br>
+                        des troubles et des dangers dont nous sommes exclus</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f012v.jpg" alt="Ms. 1054, f. 12v">
+                    <figcaption>Ms. 1054, f. 12v</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p>les uent sont appaisé par un diuin miracle<br>
+les françois trompé en croÿant leurs oracles<br>
+qui leurs auoit promis de nous rendre sus le fait<br>
+mais ils furent reduit a demander la paix<br>
+sous des conditions si basses et si laches<br>
+que leur posterité en soufrira de taches<br>
+moquons nous maintenant d'une guerre si pronte<br>
+dansont donc pilorÿ quittons l'inquietude<br>
+et laissons les hermites ruer en solitude<br>
+<span class="critical-note" tabindex="0">las ils n'on rien emporte du paÿs que la honte<span class="critical-tooltip" role="tooltip">244 <em>om.</em> P</span></span></p>
+                    <p class="speaker">Pÿlorÿ</p>
+                    <p>Pou se gira mai belle ji pregno grand pidio<br>
+de te uöe daisola main te rancajtreillie<br>
+süs söe de tas gens, uin banqueta ué moÿ<br>
+ji a di bon uin blanc et das hairants fourets,<br>
+nous prierans las aimis que sont de nos coutas<br>
+ai sailuerans lou roy boÿrant ai sai sante</p>
+                    <p class="speaker">Porte noire</p>
+                    <p>Non je n'oserois abandonner mon poste<br>
+il serat presque nuit auant que tu m'en oste<br>
+sans adieu pÿlorÿ</p>
+                    <p class="speaker">Pÿlorÿ</p>
+                    <p>ha uin cet mô paingnie<br>
+j te ueux dire in mou aiuans que de pissie<br>
+sot qui reste in sargot planta dans mon sarue !<br>
+ai t'on fa ue chüe uous das airmanets nouué<br>
+ué nous tous ot teillie craïnne let pé noire</p>
+                
+
+                </div>
+            </section>
+
+
+            <section class="folio">
+                <figure class="folio-image">
+                    <img src="Images_ms/ms1054-f013r.jpg" alt="Ms. 1054, f. 13r">
+                    <figcaption>Ms. 1054, f. 13r</figcaption>
+                </figure>
+
+                <div class="folio-text">
+                    <p>ji nÿ est pas demoura in poulain sus let foire<br>
+nun n'olla chüe las quattres pou panre das repas<br>
+pouchan qu'on lieu disa messieur fripa</p>
+                    <p class="speaker">Porte noire</p>
+                    <p>Uraÿement tu me fais rire quand je uois tes ebats<br>
+scais tu pas que tous ceux qui suiuent les combats<br>
+ne tombent pas toujours dans le dernier malheur<br>
+et qu'on ÿ uoit soueuent un mort et un uainqueur,<br>
+ainsi dans nos quartiers, il etoit bien deçent<br>
+qu'on ÿ laisse du moins, monsieur le président,<br>
+c'est un homme de bien, qui par milles moÿens,<br>
+peut rendre de bon coeur seruiçe aux citoÿens<br>
+et l'on scait que les autres n'étoit coupable en rien<br>
+sinon d'être tenu toujours homme de bien</p>
+                    <p class="speaker">Pÿlorÿ</p>
+                    <p>Té lai raine das pöetes, te pale en bon cretin,<br>
+te beille ton aiuis, ai ceux de saint quetin,<br>
+ce sot de bon offans, ma foÿ tou en ot bon,<br>
+sot petre nous n'aimans que las gens de renom,<br>
+main sans tant chipouta, ji ué me raifrôchit<br>
+câr las prochoüs toujoüs l'aiuant lou gourgoulÿ,<br>
+ce te ueux me palas ii faut en daisendant<br>
+te charche lou lougis qu'on dit au charbon blanc<br>
+aidieu qu'on beille lou bon uepre pas let<br>
+sot bé set mauuas jaimas point de regret</p>
+                    <p class="stage-direction">Fin du dialogue entre Pÿlorÿ et Porte Noire</p>
+                
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <span data-lang="en">Student project · MA Rare Books and Digital Humanities · 2024–2026</span>
+        <span data-lang="fr" hidden>Projet étudiant · Master Rare Books and Digital Humanities · 2024–2026</span>
+    </footer>
+</body>
+</html>

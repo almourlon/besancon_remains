@@ -1,9 +1,4 @@
-/*
-    Script commun pour le bilinguisme de tout le site.
-    Il affiche la version anglaise ou française, adapte les textes, les éléments
-    masqués, les titres de page et les libellés d'accessibilité, puis mémorise
-    la langue choisie dans le navigateur.
-*/
+/*Script commun pour le bilinguisme de tout le site.*/
 
 (() => {
     const root = document.documentElement;
