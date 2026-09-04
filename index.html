@@ -4,7 +4,6 @@
     Les versions anglaise et française des textes sont enregistrées dans les attributs data-en et data-fr.
     Le fichier language.js relié à cette page affiche la langue choisie avec les boutons EN/FR,
     adapte les libellés d’accessibilité et mémorise la préférence dans le navigateur.
-    La mise en page et son adaptation aux différentes tailles d’écran sont définies dans styles.css.
 -->
 <html lang="en">
 <head>
@@ -21,7 +20,7 @@
 <body data-en-title="For All Its Changes, Besançon Remains | Home" data-fr-title="For All Its Changes, Besançon Remains | Accueil">
 
     <header class="header">
-        <a class="brand" href="index.html" aria-label="For All Its Changes, Besançon Remains | Home">
+        <a class="brand" href="index.html">
             <span class="brand-mark" aria-hidden="true">❧</span>
             <span class="title">Besançon Remains</span>
         </a>
@@ -41,53 +40,53 @@
     </header>
 
     <main>
-        <section class="hero" aria-labelledby="project-title">
+        <section class="hero">
             <p class="eyebrow" data-en="BMB Ms 1054 · A digital critical-edition project" data-fr="BMB Ms 1054 · Un projet d’édition critique numérique">BMB Ms 1054 · A digital critical-edition project</p>
-            <h1 id="project-title">For All Its Changes,<br><em>Besançon Remains</em></h1>
+            <h1>For All Its Changes,<br><em>Besançon Remains</em></h1>
             <p class="subtitle" data-en="Political Change and Bisontin Particularism in BMB Ms 1054: Towards a Critical Edition" data-fr="Changement politique et particularisme bisontin dans le BMB Ms 1054 : vers une édition critique">Political Change and Bisontin Particularism in BMB Ms 1054: Towards a Critical Edition</p>
         </section>
 
-        <div class="fleuron-rule" role="presentation"><span>❦</span></div>
+        <div class="fleuron-rule" aria-hidden="true"><span>❦</span></div>
 
-        <section class="introduction" aria-labelledby="introduction-title">
-            <h2 id="introduction-title" data-en="About the project" data-fr="À propos du projet">About the project</h2>
+        <section class="introduction">
+            <h2 data-en="About the project" data-fr="À propos du projet">About the project</h2>
             <div class="introduction-copy">
                 <p class="drop-cap" data-en="Compiled in 1715 and now held by the Bibliothèque municipale de Besançon, BMB Ms 1054 brings together dialogues and occasional pieces written at different moments in the city’s recent past. In French as well as in Franc-Comtois and Bisontin forms of speech, monuments, winegrowers, travellers and civic figures debate the events that transformed Besançon between the late sixteenth and early eighteenth centuries." data-fr="Compilé en 1715 et aujourd’hui conservé à la Bibliothèque municipale de Besançon, le BMB Ms 1054 rassemble des dialogues et des pièces de circonstance composés à différents moments de l’histoire récente de la ville. En français comme dans des formes de parler comtois et bisontin, monuments, vignerons, voyageurs et figures civiques y débattent des événements qui ont transformé Besançon entre la fin du XVIe et le début du XVIIIe siècle.">Compiled in 1715 and now held by the Bibliothèque municipale de Besançon, BMB Ms 1054 brings together dialogues and occasional pieces written at different moments in the city’s recent past. In French as well as in Franc-Comtois and Bisontin forms of speech, monuments, winegrowers, travellers and civic figures debate the events that transformed Besançon between the late sixteenth and early eighteenth centuries.</p>
                 <p data-en="The collection preserves the memory of a city repeatedly confronted with changes of status, allegiance and government. Yet its texts do more than record political upheaval: they reveal the endurance of local institutions, language, humour and civic identity. Reading them together makes it possible to examine how the people of Besançon understood change and how they continued to imagine what made their city distinctive." data-fr="Le recueil conserve ainsi la mémoire d’une ville confrontée à plusieurs reprises à des changements de statut, d’allégeance et de gouvernement. Mais ses textes ne se contentent pas d’enregistrer les bouleversements politiques : ils donnent à voir la persistance d’institutions, d’une langue, d’un humour et d’une identité civique propres. Les lire ensemble permet d’étudier la manière dont les Bisontins ont compris le changement et continué d’imaginer ce qui faisait la singularité de leur ville.">The collection preserves the memory of a city repeatedly confronted with changes of status, allegiance and government. Yet its texts do more than record political upheaval: they reveal the endurance of local institutions, language, humour and civic identity. Reading them together makes it possible to examine how the people of Besançon understood change and how they continued to imagine what made their city distinctive.</p>
             </div>
         </section>
 
-        <aside class="edition-note" aria-labelledby="edition-note-title">
-            <p class="edition-note-label" id="edition-note-title" data-en="The digital edition" data-fr="L’édition numérique">The digital edition</p>
+        <aside class="edition-note">
+            <p class="edition-note-label" data-en="The digital edition" data-fr="L’édition numérique">The digital edition</p>
             <p data-en="This website presents work towards a critical edition of the collection. It brings manuscript images and transcriptions together, identifies textual variants where other witnesses survive, and provides the historical and material context needed to interpret the texts. The transcriptions and editorial notes remain a work in progress." data-fr="Ce site présente un travail préparatoire à l’édition critique du recueil. Il réunit les images du manuscrit et les transcriptions, relève les variantes lorsque d’autres témoins sont conservés et fournit le contexte historique et matériel nécessaire à l’interprétation des textes. Les transcriptions et l’appareil éditorial restent en cours d’élaboration.">This website presents work towards a critical edition of the collection. It brings manuscript images and transcriptions together, identifies textual variants where other witnesses survive, and provides the historical and material context needed to interpret the texts. The transcriptions and editorial notes remain a work in progress.</p>
         </aside>
 
-        <section class="explore" aria-labelledby="explore-title">
+        <section class="explore">
             <div class="section-heading">
                 <p class="section-number" aria-hidden="true">I · II</p>
-                <h2 id="explore-title" data-en="Explore the collection" data-fr="Explorer le recueil">Explore the collection</h2>
+                <h2 data-en="Explore the collection" data-fr="Explorer le recueil">Explore the collection</h2>
             </div>
 
-            <div class="gateways">
-                <a href="dialogues.html" class="gateway">
-                    <span class="gateway-image">
+            <div class="home-cards">
+                <a href="dialogues.html" class="home-card">
+                    <span class="home-card-image">
                         <img src="dial.jpg" alt="Drawing from BMB Ms 1054" data-en-alt="Drawing from BMB Ms 1054" data-fr-alt="Dessin provenant du BMB Ms 1054">
                     </span>
-                    <span class="gateway-caption">
-                        <span class="gateway-title" data-en="Dialogues" data-fr="Dialogues">Dialogues</span>
-                        <span class="gateway-sub" data-en="Manuscript images, transcriptions and editorial notes" data-fr="Images du manuscrit, transcriptions et notes éditoriales">Manuscript images, transcriptions and editorial notes</span>
-                        <span class="gateway-arrow" aria-hidden="true">→</span>
+                    <span class="home-card-text">
+                        <span class="home-card-title" data-en="Dialogues" data-fr="Dialogues">Dialogues</span>
+                        <span class="home-card-description" data-en="Manuscript images, transcriptions and editorial notes" data-fr="Images du manuscrit, transcriptions et notes éditoriales">Manuscript images, transcriptions and editorial notes</span>
+                        <span class="home-card-arrow" aria-hidden="true">→</span>
                     </span>
                 </a>
 
-                <a href="contexte.html" class="gateway">
-                    <span class="gateway-image">
+                <a href="contexte.html" class="home-card">
+                    <span class="home-card-image">
                         <img src="contexte1.jpg" alt="Cassini map" data-en-alt="Cassini map" data-fr-alt="Carte de Cassini">
                     </span>
-                    <span class="gateway-caption">
-                        <span class="gateway-title" data-en="Historical Context" data-fr="Contexte historique">Historical Context</span>
-                        <span class="gateway-sub" data-en="Besançon, Franche-Comté and the political transformations behind the texts" data-fr="Besançon, la Franche-Comté et les transformations politiques qui éclairent les textes">Besançon, Franche-Comté and the political transformations behind the texts</span>
-                        <span class="gateway-arrow" aria-hidden="true">→</span>
+                    <span class="home-card-text">
+                        <span class="home-card-title" data-en="Historical Context" data-fr="Contexte historique">Historical Context</span>
+                        <span class="home-card-description" data-en="Besançon, Franche-Comté and the political transformations behind the texts" data-fr="Besançon, la Franche-Comté et les transformations politiques qui éclairent les textes">Besançon, Franche-Comté and the political transformations behind the texts</span>
+                        <span class="home-card-arrow" aria-hidden="true">→</span>
                     </span>
                 </a>
             </div>

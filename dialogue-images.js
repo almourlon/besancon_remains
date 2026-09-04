@@ -1,7 +1,6 @@
 /*
     Ce script permet d'agrandir les images des folios.
     Il crée une seule fenêtre d'agrandissement, puis y affiche l'image cliquée.
-    La touche Échap, le bouton de fermeture ou un clic autour de l'image la referme.
 */
 
 (() => {

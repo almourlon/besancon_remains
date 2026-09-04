@@ -29,13 +29,13 @@
     .explore                accès aux grandes rubriques du site
     .section-heading        titre d'une grande section
     .section-number         numéro décoratif d'une section
-    .gateways               grille contenant les cartes d'accès
-    .gateway                carte cliquable vers une rubrique
-    .gateway-image          image d'une carte d'accès
-    .gateway-caption        zone de texte d'une carte d'accès
-    .gateway-title          titre d'une carte d'accès
-    .gateway-sub            description courte d'une carte d'accès
-    .gateway-arrow          flèche placée dans une carte d'accès
+    .home-cards             grille contenant les cartes d'accès de l'accueil
+    .home-card              carte cliquable vers une rubrique
+    .home-card-image        image d'une carte d'accès
+    .home-card-text         zone de texte d'une carte d'accès
+    .home-card-title        titre d'une carte d'accès
+    .home-card-description  description courte d'une carte d'accès
+    .home-card-arrow        flèche placée dans une carte d'accès
     .credit-note            mention relative aux images et aux droits
 
     Contexte historique
@@ -110,6 +110,8 @@
     .article                présentation ou liste des dialogues
     .dialogue-subtitle      titre développé d'un dialogue
     .image-hint             indication expliquant l'agrandissement des images
+    .sententiae-index       navigation vers les deux ensembles de sentences latines
+    .sententiae-section     ensemble de sentences rattaché à un dialogue
     .folio                  image et transcription présentées ensemble
     .folio-image            image du folio et sa légende
     .folio-text             transcription placée en regard de l'image
@@ -122,11 +124,9 @@
 
     IDENTIFIANTS HTML
 
-    Ces identifiants servent d'ancres, de titres accessibles ou de destinations
-    de liens. Ils n'ont pas besoin de règles CSS particulières :
-    #project-title, #introduction-title, #edition-note-title, #explore-title,
-    #manuscript-title, #codex, #codex-title, #compilation,
-    #compilation-title, #hands, #hands-title et #evidence-title.
+    Ces identifiants servent d'ancres et de destinations de liens. Ils n'ont pas
+    besoin de règles CSS particulières : #codex, #compilation, #hands,
+    #sententiae-comtois et #sententiae-jacquemart.
 */
 /* 1. RÉGLAGES GÉNÉRAUX */
 
@@ -167,9 +167,15 @@ a, button { -webkit-tap-highlight-color: transparent; }
 
 a:focus-visible, button:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
 
-.source-note { color: var(--ink-soft); }
+.source-note, .document-status { color: var(--ink-soft); }
 
-.source-note p { margin: 0; }
+/* Supprime les marges inutiles dans plusieurs petits blocs du site. */
+.source-note p,
+.edition-note p,
+.credit-note p,
+.map-figure,
+.manuscript-title-quote p,
+.limits-note p { margin: 0; }
 
 /* 2. EN-TÊTE, NAVIGATION ET PIED DE PAGE */
 
@@ -329,7 +335,7 @@ nav.menu {
 
 .introduction { padding: 58px 0 20px; }
 
-.introduction h2, .section-heading h2 {
+.introduction h2, .section-heading h2, .sententiae-section > h2 {
     margin: 0;
     color: var(--wine);
     font-family: var(--display);
@@ -341,7 +347,7 @@ nav.menu {
 
 .introduction-copy { margin-top: 22px; text-align: justify; }
 
-.introduction-copy p { margin: 0 0 1.1em; }
+.introduction-copy p, .article p { margin: 0 0 1.1em; }
 
 .drop-cap::first-letter {
     float: left;
@@ -363,8 +369,6 @@ nav.menu {
     font-size: 0.94em;
     font-style: italic;
 }
-
-.edition-note p, .credit-note p { margin: 0; }
 
 .edition-note .edition-note-label {
     margin-bottom: 7px;
@@ -392,13 +396,13 @@ nav.menu {
     letter-spacing: 0.12em;
 }
 
-.gateways {
+.home-cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px;
 }
 
-.gateway {
+.home-card {
     display: flex;
     min-width: 0;
     flex-direction: column;
@@ -410,20 +414,20 @@ nav.menu {
     transition: 0.25s ease;
 }
 
-.gateway:hover {
+.home-card:hover {
     transform: translateY(-4px);
     border-color: var(--bronze);
     box-shadow: 0 12px 24px var(--shadow);
 }
 
-.gateway-image {
+.home-card-image {
     display: block;
     overflow: hidden;
     aspect-ratio: 4 / 3;
     background: var(--rule);
 }
 
-.gateway-image img {
+.home-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -431,9 +435,9 @@ nav.menu {
     transition: 0.4s ease;
 }
 
-.gateway:hover .gateway-image img { transform: scale(1.04); filter: sepia(0%); }
+.home-card:hover .home-card-image img { transform: scale(1.04); filter: sepia(0%); }
 
-.gateway-caption {
+.home-card-text {
     position: relative;
     display: block;
     min-height: 126px;
@@ -441,16 +445,16 @@ nav.menu {
     text-align: left;
 }
 
-.gateway-title, .gateway-sub { display: block; }
+.home-card-title, .home-card-description, .chronology span { display: block; }
 
-.gateway-title {
+.home-card-title {
     color: var(--wine);
     font-family: var(--display);
     font-size: 1.3em;
     font-weight: 600;
 }
 
-.gateway-sub {
+.home-card-description {
     margin-top: 5px;
     color: var(--ink-soft);
     font-size: 0.85em;
@@ -458,7 +462,7 @@ nav.menu {
     line-height: 1.35;
 }
 
-.gateway-arrow {
+.home-card-arrow {
     position: absolute;
     right: 20px;
     bottom: 21px;
@@ -467,7 +471,7 @@ nav.menu {
     transition: 0.25s ease;
 }
 
-.gateway:hover .gateway-arrow { transform: translateX(4px); color: var(--wine); }
+.home-card:hover .home-card-arrow { transform: translateX(4px); color: var(--wine); }
 
 .credit-note {
     margin: 0 0 54px;
@@ -565,11 +569,11 @@ nav.menu {
 
 .article-body, .document-body { max-width: 780px; margin: auto; }
 
-.article-body { text-align: justify; }
+.article-body, .folio-text { text-align: justify; }
 
 .article-body p, .document-body p { margin: 0 0 1.15em; }
 
-.article-body h2, .document-body h2 {
+.document-body h2 {
     margin: 42px 0 16px;
     color: var(--wine);
     font-family: var(--display);
@@ -584,10 +588,6 @@ nav.menu {
     font-size: 0.92em;
 }
 
-.document-status { color: var(--ink-soft); }
-
-.document-status p { margin: 0; }
-
 .context-page .source-note p + p { margin-top: 8px; }
 
 .transcription {
@@ -596,9 +596,7 @@ nav.menu {
     text-align: left;
 }
 
-.transcription + .transcription { margin-top: 55px; }
-
-.transcription h2 { margin-top: 0; }
+.transcription h2, .folio-text .speaker:first-child { margin-top: 0; }
 
 blockquote {
     margin: 28px 0;
@@ -613,8 +611,6 @@ blockquote {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
-
-.map-figure { margin: 0; }
 
 .map-figure img {
     display: block;
@@ -678,10 +674,11 @@ blockquote {
 .hero-actions, .experiment-actions {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 12px;
     margin-top: 28px;
 }
+
+.hero-actions { justify-content: center; }
 
 .experiment-actions { justify-content: flex-start; }
 
@@ -767,7 +764,7 @@ blockquote {
     text-align: justify;
 }
 
-.prose-block p { margin: 0 0 1em; }
+.prose-block p, .folio-text p { margin: 0 0 1em; }
 
 .metadata-grid {
     display: grid;
@@ -803,8 +800,6 @@ blockquote {
     text-align: center;
 }
 
-.manuscript-title-quote p { margin: 0; }
-
 .chronology {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -815,8 +810,6 @@ blockquote {
 }
 
 .chronology li { padding-top: 15px; border-top: 2px solid var(--bronze); }
-
-.chronology span { display: block; }
 
 .chronology-date, .witness-date {
     color: var(--wine);
@@ -915,8 +908,6 @@ blockquote {
     color: var(--ink-soft);
     font-size: 0.9em;
 }
-
-.limits-note p { margin: 0; }
 
 .limits-title {
     margin-bottom: 5px !important;
@@ -1057,36 +1048,6 @@ blockquote {
 
 .article { margin-top: 28px; }
 
-.article p { margin: 0 0 1.1em; }
-
-.article b, .article strong { color: var(--wine); font-weight: 600; }
-
-.article ul, .article ol { margin: 0.6em 0 1.2em; padding-left: 1.4em; }
-
-.article li { margin-bottom: 0.5em; }
-
-.article ol {
-    padding-left: 0;
-    list-style: none;
-    counter-reset: piece;
-}
-
-.article ol li {
-    position: relative;
-    padding-left: 2.2em;
-    counter-increment: piece;
-}
-
-.article ol li::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: var(--wine);
-    content: counter(piece);
-    font-family: var(--display);
-    font-weight: 600;
-}
-
 .dialogue-subtitle {
     margin: 0 0 8px;
     color: var(--ink-soft);
@@ -1100,6 +1061,20 @@ blockquote {
     color: var(--bronze);
     font-size: 0.85em;
     font-style: italic;
+}
+
+/* Sommaire et séparation des deux ensembles de sentences latines. */
+.sententiae-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 32px 0 56px;
+}
+
+.sententiae-section { scroll-margin-top: 25px; }
+
+.sententiae-section + .sententiae-section {
+    margin-top: 84px;
+    padding-top: 54px;
+    border-top: 3px double var(--bronze);
 }
 
 .folio {
@@ -1128,7 +1103,7 @@ blockquote {
     margin: 0 auto;
     border: 1px solid var(--rule);
     background: var(--parchment-light);
-    box-shadow: 0 6px 18px rgba(58, 46, 34, 0.18); 
+    box-shadow: 0 6px 18px rgba(58, 46, 34, 0.18);
     cursor: zoom-in;
 }
 
@@ -1141,10 +1116,6 @@ blockquote {
     text-align: center;
 }
 
-.folio-text { text-align: justify; }
-
-.folio-text p { margin: 0 0 1em; }
-
 .folio-text .speaker {
     margin: 1.2em 0 0.15em;
     color: var(--wine);
@@ -1154,8 +1125,6 @@ blockquote {
     letter-spacing: 0.04em;
     text-align: left;
 }
-
-.folio-text .speaker:first-child { margin-top: 0; }
 
 .stage-direction {
     color: var(--ink-soft);
@@ -1329,7 +1298,7 @@ blockquote {
 
     .edition-note { margin-bottom: 50px; padding: 16px 18px 16px 20px; }
 
-    .gateways,
+    .home-cards,
     .context-grid,
     .map-grid,
     .section-index,
@@ -1338,7 +1307,8 @@ blockquote {
     .witness-grid,
     .method-steps,
     .evidence-scale,
-    .folio {
+    .folio,
+    .sidebar ul {
         grid-template-columns: 1fr;
     }
 
@@ -1362,7 +1332,7 @@ blockquote {
 
     .manuscript-title-quote, .witness-card, .experiment-panel { padding: 20px; }
 
-    .sidebar ul { grid-template-columns: 1fr; }
+    .sententiae-section + .sententiae-section { margin-top: 60px; padding-top: 40px; }
 
     .folio-image img { max-width: 440px; }
 
